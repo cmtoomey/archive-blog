@@ -6,7 +6,7 @@ category: Responsive
 tags: [ 'design', 'javascript', 'api', 'tutorial' ]
 ---
 
-##Here's how I feel when someone asks me if Tableau can be responsive.
+## Here's how I feel when someone asks me if Tableau can be responsive.
 
 <div class="titleheader">
   <img src="https://cmtoomey.github.io/img/solo-1447867501-75.gif" alt="..." />
@@ -23,7 +23,7 @@ If you were one of the 10,000 people who went to TableauCon2015, you saw Tableau
 
 This is Tableau stepping (very slowly) into the realm of what is known as **Responsive Design**.
 
-###What is **Responsive Design?**
+### What is **Responsive Design?**
 
 If we consult the [all-mighty oracle](https://en.wikipedia.org/wiki/Responsive_web_design):   
 
@@ -38,7 +38,7 @@ That generated a valid question from his fellow Zen Master Andy Kriebel.
 
 That got me thinking - why should people care about Responsive Design, and what’s the easiest way for them to utilize it?
 
-###Why should you care?
+### Why should you care?
 
 You cannot predict or control how your users will interact with your content. Desktops, laptops, high pixel-density displays, smartphones, tablets - so many screens! Just how many - Kelly Martin has the answer.
 
@@ -48,7 +48,7 @@ You should care about HOW your users will consume your content. If it doesn’t 
 
 ![Responsive1](https://cmtoomey.github.io/img/responsivene-1447870219-37.gif)
 
-####How to do Responsive Design in tableau
+#### How to do Responsive Design in tableau
 
 Until DSD arrives, you have a few options. As I mentioned at the top, DSD is Tableau toeing into the Responsive Design world. It's a great first step, but it will require you to pre-specify the devices you want your users to consume your work on. That's backwards. It lacks the fluidity of true Responsive Design - but I'll take what I can get.
 
@@ -56,7 +56,7 @@ Responsive Design also requires layout changes and font-resizing - which DSD can
 
 ---
 
-###Tableau Out-of-the-box: Automatic/Ranged Dashboard Sizes
+### Tableau Out-of-the-box: Automatic/Ranged Dashboard Sizes
 
 Alright [Andy Kriebel](https://twitter.com/VizWizBI) - this part is for you. When you publish a dashboard using an Automatic Size, this is what you get in Public/Server.
 
@@ -147,7 +147,7 @@ That’s it - no additional code required. Here's how to keep it simple:
 
 You don’t need to set height and width in your CSS - if your dashboard is set to automatic and you don’t include those two settings, [Tableau will default to published settings](http://onlinehelp.tableau.com/current/api/js_api/en-us/help.htm#JavaScriptAPI/js_api_whats_new.htm#code_changes).
 
-####9.2 makes this so easy
+#### 9.2 makes this so easy
 
 In the 9.2 update to the Javascript API, Tableau has (thankfully) embedded a VIZ_RESIZE event listener. What this means is that when you change the size of your window, Tableau detects it, gets the new size, and double checks against the size of your viz. If they don’t match (and you haven’t specified a size) then Tableau will resize it for you (you can’t do DSD without this feature).
 
@@ -157,7 +157,7 @@ What this means is a) you don’t need any jQuery or other event listeners to ge
 
 ---
 
-###The Elephant in the Room
+### The Elephant in the Room
 
 Everything I’ve shown above is great if you only have one worksheet, or a dashboard with LOTS of white space. But what about a dashboard, specifically one with lots of well-designed actions and well-placed Quick Filters, Parameters and Text Objects?
 
@@ -244,7 +244,7 @@ But you can’t do actions...well you can, but I wouldn’t recommend rebuilding
 
 ---
 
-###So what now?
+### So what now?
 
 Hopefully you have a better understanding of a) what Responsive Design is and b) how you can and will be able to do it in the future.
 
@@ -254,13 +254,13 @@ Ideally, I’d like to have the ability to define my own breakpoints. Scalable d
 
 I think DSD is well intentioned, but it might be more trouble for the user than it’s worth...and for the love, can we please have scalable fonts and native access to Google Fonts and TypeKit? **Bring your own font for the win!**
 
-##PLEASE?
+## PLEASE?
 
 ![Chewie](https://cmtoomey.github.io/img/giphy-1447877362-44.gif)
 
 ---
 
-###Update
+### Update
 
 Within 5m of this post, Allan Walker emails me and mentiones that the method I described above won’t really work if you have to use the embed code instead of Javascript. So if you are using a Sharepoint webpart or something where you don’t have code-level access, things might be a little bit different.
 

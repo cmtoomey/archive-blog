@@ -80,4 +80,4 @@ function receiveMessage(event) {
 Here's what that looks like in the real world:
 ![proxy](https://cmtoomey.github.io/img/test1-1439922295-92.gif)
 
-###That's some good old-fashioned mischief
+### That's some good old-fashioned mischief

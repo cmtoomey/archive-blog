@@ -8,15 +8,15 @@ tags: [ 'XML', 'NeedToKnow']
 
 Before I write any more works, do me a favor: forget all the marketing, jargon, and Kool-Aid and think critically about the question in the title of the post.
 
-##Ready? Here's my answer
+## Ready? Here's my answer
 
-###Tableau is a tool for writing queries and rendering results.
+### Tableau is a tool for writing queries and rendering results.
 
 Take a moment and think about that statement- Tableau Desktop (the tool itself) is, at it's core, a rendering engine (and a fantastic one at that). *Why should you care about that?* You should care because that means that you no longer have to consider Tableau as the solution to all your data problems. Stop thinking that you need to have every single piece of data in your viz or your dashboard, with a corresponding control mechanism, for it to be effective. Only then can you stop asking the question, "How do I get Tableau to do X?" and start asking, "How can I use Tableau to achieve Y?"
 
 *Feel better?* No? Let's fix that by showing just how easy it is to bend Tableau to your will.
 
-##XML for the win
+## XML for the win
 At it's heart, Tableau may be a rendering agent, but it's lifeblood is [Extensible Markup Language](https://en.wikipedia.org/wiki/XML) or XML. Here's a list of all the Tableau components (that I know of) that are written in or depend on XML:
 + VizQL
 + Tableau Workbooks
@@ -30,7 +30,7 @@ Don’t be intimidated by the many many lines of “code” you see. XML is mean
 
 It's one thing to open the XML, it's another thing to be explain the hierarchy. To help with this, I created a marked-up version of a TWB [here](https://gist.github.com/cmtoomey/96342ba07dd5cba6ecc6). Check it out and you will have a much better understanding of how a workbook is organized based on how you build your worksheets and dashboards (it is missing one section, Thumbnails - but that really isn’t all that interesting anyways).
 
-##Why so much attention to XML? I can do everything I need to in Desktop.
+## Why so much attention to XML? I can do everything I need to in Desktop.
 Programattic Access, son!
 
 In other words, because Tableau is built on a logical structure that is largely predictable, we can automate certain tasks. What kind of tasks?

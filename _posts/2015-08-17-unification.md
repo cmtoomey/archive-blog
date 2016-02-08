@@ -7,7 +7,7 @@ tags: [ 'api', 'xml', 'javascript' ]
 ---
 ![Ali](https://cmtoomey.github.io/img/unify-1437615845-32.gif)
 
-###Tableau Javascript & REST API together at last!
+### Tableau Javascript & REST API together at last!
 ---
 
 
@@ -17,26 +17,26 @@ In Tableau 8.2, the REST API was introduced. This library was meant give you ext
 
 Of the two, the JSAPI has always been the more popular child. Tableau provides [7 training videos](http://www.tableau.com/learn/tutorials/on-demand/javascript-api-intro-and-embed), while REST only gets one. There’s even a [whole site focused on making the JSAPI more accessible](http://padawandojo.tumblr.com/post/118909494969/tableau-js-api-101). Personal opinion, it’s probably because the JSAPI focuses on the viz themselves, while REST is squarely in the domain of Server Admins.
 
-###So What's the Big Deal?
+### So What's the Big Deal?
 Having APIs is great - but most people are a bit stand-offish when it comes to code. I get it, it’s intimidating - you have to be ok with things not working exactly how you learned them in training, and it is nearly impossible to keep up with technology...especially web technology.
 
 There is a clear value proposition to both: *You can put Tableau anywhere and manage it on the fly*. That’s no small feat.
 
-####But how, exactly, do you do that?
+#### But how, exactly, do you do that?
 The JSAPI is straightforward - it’s Javascript. Google [“Javascript Training”](http://lmgtfy.com/?q=javascript+training) and there are pages and pages of options - most at a fairly low cost (including free). Tableau’s training is actually a great introduction, and it includes some basic HTML instruction.
 
 The REST API on the other hand - that’s a different technical beast all together. It requires an understanding of how HTTP requests actually work - which means you need to understand the plumbing of the Internet. That’s easy, right? If you watch the Tableau video on REST (narrated by the great Michael Kovner), or watch the [TC14 session](https://tc14.tableau.com/schedule/content/932) on Tableau APIs, there is a lot going on. Kovner and Christopher use something called [NodeJS](https://nodejs.org/en/) to do all their work. Great - another thing you have to learn (not that you shouldn't, Node is awesome).
 
 But what if you just want to have some basic functionality in a webpage to see Tableau Server content (like which viz are available to a specific user) and then use that information to embed it into your app? And not learn anything more than basic, vanilla Javascript? Is it possible to unify the APIs?
 
-###YES
+### YES
 In boxing, where there is a World Boxing Association, a World Boxing Council, an International Boxing Federation, and a World Boxing Organization that all have a World Champion - and when they unify the titles (like when Mayweather and Pacquiao fought), everything is nice and tidy.
 
 Here, we have two true APIs that touch Tableau’s services. We natively want to use them together. We want to unify them into one Tableau API.
 
 ---
 
-#Done
+# Done
 ![Snippet](https://cmtoomey.github.io/img/screenshot-1437677334-9.png)
 
 What is this? It is a package you can download for Atom (that’s an IDE - that thing I told you to get in one of my very first posts). What it does is normalizes every major REST API function into a series of keystrokes - resulting in clean Javascript, with a nice jQuery wrapper.
@@ -53,12 +53,12 @@ The example above is how you want to start any use of the REST API - logging in.
 I’ve done my best to document what you need to put into each call and what comes back - that way you can either capture that data and use it elsewhere, or move on.
 In the GitHub Repo and the Atom Package site, I’ve included some documentation about how to do this (it’s also commented into the login snippet). Play around with it - I promise you’ll get the hang of it.
 
-###Unification - Complete!
+### Unification - Complete!
 ![Belt](https://cmtoomey.github.io/img/belt-1437686868-82.gif)
 
 ---
 
-##Where did this come from?
+## Where did this come from?
 
 So we’ve got the ability to write all the Tableau API calls in one language. That may be useful and all, but more useful might be how this all came about. Knowing the process might just unlock some other really cool Tableau things for you.
 
@@ -76,7 +76,7 @@ Now we have a pre-formatted code snippet. That button on the right is COPY. I se
 
 ---
 
-###Example - How to be cool like John Oliver
+### Example - How to be cool like John Oliver
 I love John Oliver - I think he’s got the best 30m on television. Period (Sorry GoT). I’m sure you remember his section on net neutrality? You don’t?!?
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/fpbOEoRrHyU" frameborder="0" allowfullscreen></iframe>
 
@@ -127,7 +127,7 @@ That means you can use the POSTMAN method to fast-track your own web connectors 
 
 ---
 
-###Let's talk about CORS
+### Let's talk about CORS
 
 Ugh - I hate to do this, but it’s important. When you make a request from a data provider you are essentially asking them to let an unknown entity (you) **GET** (the HTTP action) data from their servers. There are other HTTP actions: **PUT, POST, DELETE** - which are far more impactful (because they do exactly what they say they do).
 
@@ -145,7 +145,7 @@ So - if you have Tableau Server sharing a domain with all your stuff, great. If 
 
 So - if you have Tableau Server sharing a domain with all your stuff, great. If you don’t - [go here and vote this up](https://community.tableau.com/ideas/2644). They don’t need to enable it directly, but some documentation would be nice.
 
-####Counterpoint to using the Web Data Connector or Apache HTTPD folder
+#### Counterpoint to using the Web Data Connector or Apache HTTPD folder
 
 Today, T[amas Foldi published an awesome article](http://databoss.starschema.net/the-big-cors-debate-tableau-server-and-external-ajax-calls/) on how use Tableau’s new Web Data Connector function to get around CORS. Essentially, you tell Server to host your code, thereby making all your API calls same-origin. It’s a great hack - but it only solves one problem, and obfuscates the one we should be talking about.
 
@@ -165,7 +165,7 @@ Tamas is right about CORS being a **GREAT DEBATE**. Getting data out of Tableau�
 
 Workarounds like the Apache or WDC are great - but they don’t actually solve the problem. We can all help by being more like Tamas, Allan Walker, Jeffrey Shaffer, and everyone else doing things with Tableau’s JS. Find places where Tableau doesn’t work like it should, and then tell Tableau that it needs to be fixed. You should always hack around it, but don’t lose sight of solving the actual problem.
 
-###Regardless of CORS - don’t be intimidated by the APIs any more
+### Regardless of CORS - don’t be intimidated by the APIs any more
 They are awesome and useful. Go get Atom, download the package and #buildtheawesome. Let me know @Sock1tToomey if you have any questions or I can help in any way.
 
 Otherwise,

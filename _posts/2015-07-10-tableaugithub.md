@@ -7,7 +7,7 @@ tags: [ 'XML', 'git', 'hacks' ]
 ---
 ![Shippit](https://cmtoomey.github.io/img/squirrelpor-1435851730-44.jpg)
 
-##How collaboration is done!
+## How collaboration is done!
 ---
 
 By themselves, anybody can handle a Tableau project. But, if **size(team) > 1**, collaborating is really hard - copy/paste workbooks, replace datasources, and don’t even think about version control (Saving Files as Rev1, Rev2, Rev3 doesn’t count).
@@ -16,7 +16,7 @@ By themselves, anybody can handle a Tableau project. But, if **size(team) > 1**,
 
 It can be done - and I’m going to show you how. Things are a little more complicated, so we’ll do a sample workflow together. I’ll show you how Tableau behaves under the hood, and some ways you can manage that behavior.
 
-###Ready?
+### Ready?
 ---
 Let's talk about the squirrel. For those of you who don't know, that is the ShipIt Squirrel. At GitHub, the entire culture is geared around delivery - shipping new features. If you go back to the first post on [Tableau + Git](https://cmtoomey.github.io/tutorial/2015/05/16/gitstarted.html), you may remember the GitHub Flow. The central premise of Flow is [publish often, trust your teammates, and always be making things better.](http://excid3.com/blog/finishing-is-all-that-matters/)
 
@@ -35,7 +35,7 @@ You branch out, merge in. You can automatically merge - but only if you know you
 
 In the Tableau world, this means you only ever have to deal with TWBs and datasources. Once you have committed (or merged) to MASTER, publish to Tableau Server from your desktop. Git maintains all the versions and branches, and Server hosts the production version. If you need to make changes: pull, branch, edit, push, Pull Request, merge, publish. No zipping/unzipping required. GitHub doesn't care what type of files it stores, so extracts work too.
 
-###Hold onto your butts - here comes some code
+### Hold onto your butts - here comes some code
 
 Unlike my previous post, where I used the GitHub app...everything from here on out is going to be on the command line. Why? The application (while great) makes it hard to have the level of control  that we want in our Tableau workflow, especially since Tableau does some funky stuff under the hood.
 
@@ -44,7 +44,7 @@ Don't be afraid!
 
 ---
 
-###The Setup
+### The Setup
 I’m assuming you already have Git installed on your machine. If not, [follow these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). [Windows Users](https://git-for-windows.github.io/) click here. This will install Git on your machine, as well as Git Bash - your command line editor.
 
 {**UPDATE: Since the original post was published, GitHub has redone the look and feel of their repository pages. It's largely the same layout, just more elegant. All the same buttons are there, so don't worry!**}
@@ -59,7 +59,7 @@ At the top of your repo will be a section that looks like this. Click the clipbo
 
 Somewhere on your computer, create a folder, call it whatever you want (mine will be on my desktop and called GitHubDemo).
 
-####The Command Line
+#### The Command Line
 
 For Mac, open up Terminal (⌘-Space, type “Terminal,” hit Enter) . For Windows, open up the Command Prompt (Windows-button, search “Git Bash,” hit Enter). Navigate to your folder – mine is on my desktop, so the command is: **cd Desktop, cd GitHubDemo.**
 
@@ -71,7 +71,7 @@ Now that we are in the folder, we are going to do our first Git command: [CLONE]
 
 Open your folder and you’ll see a folder with the name of your repository. Open that folder and you’ll see README.MD. (You could just clone straight to the desktop or any other parent folder, but I like to keep a big repository folder that I can clone things into, so I always know where my projects live).
 
-####To tableau - but don't close the command line!!
+#### To tableau - but don't close the command line!!
 
 Start a new Tableau workbook, connect to Superstore (lame, I know), and save the workbook to the folder we just cloned into. Go back to your command line – you will (might) need to navigate down into the new folder – cd Tableau – and type *git status*. If you aren’t in the correct folder, you’ll see ```fatal: Not a git repository (or any of the parent directories): .git```. This usually means you are one level above the actual repository. Otherwise you should see something like this:
 
@@ -91,7 +91,7 @@ This is the process we are going to repeat as we develop our workbook. Make chan
 
 ---
 
-###Now for the fun part - under Tableau's hood
+### Now for the fun part - under Tableau's hood
 
 As with all workbooks – you start with Sheet 1. Let’s make it a bar chart -> Customer Segment and Sales. Name it “Bars.” Save. Now open up the TWB in XML and you’ll see what’s changed (I’m going to fold the XML up to make it easier to see).
 
@@ -109,14 +109,14 @@ Aha!! Tableau writes it’s worksheets alphabetically, while windows are as they
 
 ---
 
-####SIDEBAR: Calculation Behavior in Tableau
+#### SIDEBAR: Calculation Behavior in Tableau
 You can find your calculations for searching for the “calculation” tag in the XML. It may live in a <column> tag, but it is slightly different from the rest. First, it has a “caption” attribute, that’s the Calculation Name you see in the UI. Next it has a datatype, format, and name. The Name attribute is important, because it is how Tableau actually references calculations internally. It looks like this **name=”[Calculation_##########]”** and Tableau assigns the number.
 
 Why do you care about this? When you write the calculation, Tableau arranges it in the datasource by the name attribute, not by caption – which means you really don’t have any control over where it lands, line-wise. That means there is more opportunity for merge conflicts. This is compounded when you put the measure in play – it inserts both that <column attribute…> tag and a <column-instance> tag, but it uses the [Calculation_###] reference, not it’s name…so that’s a lot of opportunity for disruption.
 
 ---
 
-###LET’S COLLABORATE A LITTLE - AND SEE WHAT HAPPENS
+### LET’S COLLABORATE A LITTLE - AND SEE WHAT HAPPENS
 
 Let’s say that someone else has cloned the repository (or you cloned someone else's) and is doing some work. There’s a few things to remember.
 
@@ -126,14 +126,14 @@ If the datasource is local – your collaborator(s) will need a copy, because we
 
 When it comes to collaboration, there are really only two types of workflows: Back-and-forth and parallel.
 
-####Back-and-forth
+#### Back-and-forth
 Here’s the next git command you’ll need to know: [pull.](https://git-scm.com/docs/git-pull)
 
 You do some work, GitACP. Your collaborator does *git pull*  to get those changes and then does work, save, GitACP. Rinse/repeat. Everything should be ok. You can distribute the work, but it’s is pretty boring and you don’t get the time savings of everyone working on something at the same time.
 
 ![PushPull](https://cmtoomey.github.io/img/pushpull-1435857794-52.png)
 
-####Parallel
+#### Parallel
 Just imagine – a distributed team, working on a single workbook, never having to paste datasources, worksheets, or dashboards. Just pull and push and everything will be great!
 
 Not quite.  Everything you’ve done to this point still applies, but when work is people are working on the same sheets at the same time, there’s always the possibility for a conflict.
@@ -151,7 +151,7 @@ So how do you fix it? You have three options.
 
 BUT, before you begin – you actually have to figure out what the right answer is. This might be the best part about using Git with Tableau – it will force you to actually collaborate with your peers. You aren’t just sharing code, but talking about what you are doing and more importantly, why you are doing it that way. Everybody learns how to do things better.
 
-####First Fix - Manual Delete, Copy, Paste
+#### First Fix - Manual Delete, Copy, Paste
 This method is no fun, but you should start here anyways.
 
 Assuming you want to keep everything, you’ll need to hold on to the stuff you are cutting out, so you can reassemble it later.
@@ -162,7 +162,7 @@ Assuming you want to keep everything, you’ll need to hold on to the stuff you 
 
 When you are done with this, I would recommend using your IDE’s Beautify package ([Brackets](https://github.com/brackets-beautify/brackets-beautify), [Atom](https://atom.io/packages/atom-beautify)). This will auto-align your code for you - making it both easier to read and matching the source format (that way Tableau doesn’t break when it opens). Plus, if the XML moves out of whack when you Beautify, you know something is wrong.
 
-####Second Fix - Merge Tools
+#### Second Fix - Merge Tools
 If you don’t want to wade through lines and lines of code (who does?) - there are a number of tools that can help you quickly find and correct merge conflicts. I recommend either [Deltawalker](http://www.deltawalker.com/) or [KDiff3](http://kdiff3.sourceforge.net/). If you want to use something else, you need to make sure it supports 3-way editing (Original + Edited + Final). That way you can see both sides of the merge and what the final will be - otherwise, you’ll be flying blind when you clean up the merge.
 
 Once you have picked one, you need to tell Git to make it your merge tool. In your terminal type *git config --global merge.tool <tool>*. Now, when you have a merge conflict, simply type [git mergetool](https://git-scm.com/docs/git-mergetool) and it will open your tool of choice (when a merge conflict is present).
@@ -171,10 +171,10 @@ Once you have picked one, you need to tell Git to make it your merge tool. In yo
 
 KDiff’s bottom section is what wins it for me - I can edit in place, from all three options. That way, if I have easy edits, I can just pick which side. If I need to move content around (to stack worksheets around, for example), I can quickly navigate to where I want to go, copy, paste, save, done.
 
-####Third Fix - Script it
+#### Third Fix - Script it
 I told you there would be some code. We’ll use the <thumbnail tag> as an easy example of how this method works. I’m going to use the [Python Element Tree](https://docs.python.org/2/library/xml.etree.elementtree.html) module to do my XML editing.
 
-#####The ```<thumbnail>``` tag
+##### The ```<thumbnail>``` tag
 
 What you will notice as you go through this process is the ```<thumbnail>``` tag with lots of characters. This is a binary encoding of an image and changes all the time. This means it’s probably going to generate a ton of merge conflicts. The good news is that you can delete everything between the ```<thumbnails></thumbnails>``` tags and the workbook will stay functional.
 
@@ -221,7 +221,7 @@ Now navigate to your local repository, find .git/hooks/pre-commit.sample. Rename
 
 I used it to find and replace a single tag, but there’s no reason you couldn’t do things like style tag replacement (hello style guides) or even automate merge conflict resolution (since the << == >> syntax remains the same, you just have to find and store XML snippets for later use).
 
-###HOME STRETCH
+### HOME STRETCH
 
 We’ve covered about 85% of how to merge GitHub & Tableau’s Flow. However, everything we’ve done is a straight-line along the MASTER branch. To do GitHub + Tableau right, you want to incorporate branches and rebasing.
 
@@ -231,7 +231,7 @@ When you are done, you push your work, and then submit a [Pull Request](https://
 
 But what if you are doing work on a branch, and something happens to MASTER (someone changes the style guide, or something breaks and gets fixed)? Initially, you will be behind the curve - but you can use [rebase](https://git-scm.com/docs/git-rebase) to catch up. Let’s see it in action and call it a day.
 
-####Branch
+#### Branch
 
 You’ve got your Tableau workbook all ready to go. We want to explore some data, but not sure it needs to live in the production workbook...so let’s branch our workflow.
 
@@ -249,7 +249,7 @@ Now you have to give the request a title and explain what you did and why it sho
 
 Hit Merge, comment, and Confirm. Done. Now delete the branch and everything is so fresh and so clean clean. You’ll want to do a pull the next time you open your Terminal so you can get all the changes from the new branch. Also, delete your local copy of the branch with *git branch -D <name>*.
 
-####rebase
+#### rebase
 
 Last step. Here’s the setup - let’s say you’ve successfully built a branch, just as I describe above. You are doing work, but then you find out that someone went and made changes on MASTER (someone probably wanted different colors on the map or something). Your branch is now behind MASTER, and you don’t want to start over.
 
@@ -265,7 +265,7 @@ While on your current branch, you need to get the updated content from MASTER, s
 
 Now your workbook is up-to-date, push your commits (you might need to push with *git push --set-upstream origin <name>*) and submit a pull request.
 
-###THAT’S GITHUB+TABLEAU
+### THAT’S GITHUB+TABLEAU
 
 Thanks for sticking around. This should be enough to get your started on your GitHub journey. You may run into some issues with more complicated workflows. For more help, check out these [videos](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-), StackOverflow, GitHub directly, or ask the Twittersphere - we’re all here to help.
 

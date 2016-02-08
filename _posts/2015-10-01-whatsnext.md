@@ -9,7 +9,7 @@ tags: [ 'conference', 'speculation' ]
 
 On September 8th, Leland Wilkinson published an [update to his now 7-year old prediction](http://www.tableau.com/about/blog/2015/8/future-analytics-analyst-will-remain-central-43427) about the (then) forthcoming presence of IBM’s Watson in the analytics space. In that post, Wilkinson makes reference to a document, written by Jim Thomas of Pacific Northwest National Laboratory, that gave birth to the term “Visual Analytics.”  Wilkinson’s post is interesting in it’s own right, but it is the document, titled Illuminating the Path: The Research and Development Agenda for Visual Analytics, that is the inspiration for this post. [You can read it for yourself](http://vis.pnnl.gov/pdf/RD_Agenda_VisualAnalytics.pdf).
 
-###That's an odd source of inspiration...
+### That's an odd source of inspiration...
 In my previous life, I was a Scientist at [PNNL](http://www.pnnl.gov/). I focused primarily on analysis related to international nuclear safeguards, nuclear security, export controls, and international nuclear energy markets. Saving the world, one research paper at a time. They also invented some really cool stuff:
 
 + The compact disc.
@@ -22,7 +22,7 @@ In my previous life, I was a Scientist at [PNNL](http://www.pnnl.gov/). I focuse
 
 While I wasn’t the first user, I was responsible to re-starting and building Tableau @ PNNL. I say “re-start” because PNNL has been involved with Tableau since version 3.0 (that’s earlier than you can download from the Alternate Download site), and has been an international leader in defining and executing Data Visualization research agenda.
 
-###But why should you care about *Illuminating the Path?*
+### But why should you care about *Illuminating the Path?*
 
 First, there is no larger force for innovation than the U.S. government. That may sound counter-intuitive, but like it or not, entire business categories have been and are still defined by the USG’s operational challenges and purchasing priorities.
 
@@ -58,7 +58,7 @@ Throughout this post, you might see (#). This is a reference to a page/pages in 
 
 ---
 
-##The Grand Analytic Challenge
+## The Grand Analytic Challenge
 
 Modern data is multi-dimensional, dynamic, incomplete, inconsistent, potentially deceptive, and increasing in velocity. Decision-making in this environment requires individuals to perform analyses that are collaborative, accurate, and impactful while being easily understood by a variety of audiences. No problem right? Just do good analysis, predict everybody’s questions beforehand, and make this incredibly complex problem set consumable in one Powerpoint slide and 2 paragraphs.
 
@@ -68,7 +68,7 @@ Tableau is often used to accelerate reporting, but that’s a waste of what Tabl
 
 <iframe src="//giphy.com/embed/WXtccLGTLB1NS" width="100%" height="316" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ad-wants-kmart-WXtccLGTLB1NS"></a></p>
 
-###But how? What is "analysis?"
+### But how? What is "analysis?"
 
 At it’s most basic, analysis is sense-making loop (24-27). There is no one answer, only understanding and decisions.
 
@@ -78,17 +78,17 @@ This plays into the well-known concept of flow. Questions lead to activities, wh
 
 With me so far? For this to work only two things matter.
 
-###Visual Representation (Seeing) and User Interactions (Understand)
+### Visual Representation (Seeing) and User Interactions (Understand)
 
 See what I did there?
 
-###Visual Representation
+### Visual Representation
 
 The ability to see is a function of two things: Scale and Encoding.
 
 ---
 
-###Scale
+### Scale
 
 Scale is the ability to perform a lossless render of N points without being constrained by display media (24-27). In English, Visual Analytics at scale means that the visualization must be able to render any number of points on any display, while not losing any of its legibility.
 
@@ -102,15 +102,15 @@ Sure, Tableau has “Automatic” dashboard sizes, and worksheets can “Fill En
 
 If you read [Kelly Martin’s blog](http://vizcandy.blogspot.ca/) (and you should), she makes a valiant effort to solve this challenge. Her method for viz on mobile is workable, but it doesn’t actually resolve the problem at hand. It requires a dashboard variant for every major device type or family.
 
-#NO
+# NO
 
 ![response](https://cmtoomey.github.io/img/screenshot-1443102991-73.png)
 
-##We need one dashboard, consumable everywhere, all the time.
+## We need one dashboard, consumable everywhere, all the time.
 
 [Content should drive how the layout adjusts to the container.](https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints?hl=en) When that happens, everything should be just as readable as it was in the initial configuration. I should be able to build my content, exactly how I want, and then compose it’s behavior.  I should never need to know which device, just that it might be on that type of device.
 
->###Recommendation 1: Tableau should include native support for webfonts, em-based sizing, and SVG.
+> ### Recommendation 1: Tableau should include native support for webfonts, em-based sizing, and SVG.
 
 Before we do anything, non-viz content needs the ability to scale. We know that stretching a bar chart will change the size of the bars but labels, titles, axes and images do not scale. Fix that first. [**Update: Post TC15 - all of these are still an issue** 0/1]
 
@@ -120,7 +120,7 @@ Second, we need to replace (or at least augment) the dashboard authoring environ
 
 But that’s just the first step. To really achieve this vision, we need a UI composer. One that combines the visual ease-of-use Tableau is known for with the power of HTML, CSS, and JS. Code should never be a pre-requisite, but a user should always be able to get under the hood and edit line-by-line.
 
->###Recommendation 2: Tableau should build (or acquire) a next generation dashboard design interface. It should allows users to define visual behaviors without relying on HTML or CSS knowledge, while also providing code-level editing when needed.
+> ### Recommendation 2: Tableau should build (or acquire) a next generation dashboard design interface. It should allows users to define visual behaviors without relying on HTML or CSS knowledge, while also providing code-level editing when needed.
 
 In short, we need Tableau to be more like [Macaw](http://scarlet.macaw.co/).
 
@@ -130,7 +130,7 @@ Many “newer” BI tools are moving in the direction of true responsiveness, es
 
 ---
 
-###Encoding
+### Encoding
 
 How do we make data make sense?
 
@@ -160,7 +160,7 @@ There is some good news: the data problem has been solved by [Facebook](https://
 
 In addition, there are families of NoSQL databases that store data in a graph format. Typically there is typically a relationship between ANSI SQL and their native query structure. Tableau has started down this path with the MongoDB connector, but this isn’t enough.
 
->###Recommendation 3: Tableau should expand on the MongoDB connector and the Web-Data Connector method to include native connectivity to graph databases like Titan and Neo4j.
+> ### Recommendation 3: Tableau should expand on the MongoDB connector and the Web-Data Connector method to include native connectivity to graph databases like Titan and Neo4j.
 
 Bad News: simply translating SQL into something that Neo4J or Titan can understand won’t solve the problem. It will make that data more accessible but not without substantial user pain. [Just look at how difficult it is to connect Apache Drill to Tableau](https://drill.apache.org/docs/using-apache-drill-with-tableau-9-desktop/). No thanks.
 
@@ -168,7 +168,7 @@ Tableau needs a different method - but lucky for us, they already built it: **Th
 
 The only remaining problem is generating the initial graph...but Tableau has that solved too. The initial graph needs to understand the relationship between entities and their aggregate measures. Tableau already collects this metadata in the creation of an initial data connection, and stores it in the TDE column-store. Since Tableau intuitively knows how to do all necessary steps, they just need to direct resources towards building a Falcor Model every time you connect to a DB.
 
->###Recommendation 4: Tableau should develop a back-end integration between Tableau Data Connectors, the Tableau Data Engine, Falcor, and the Web Data Connector.
+> ### Recommendation 4: Tableau should develop a back-end integration between Tableau Data Connectors, the Tableau Data Engine, Falcor, and the Web Data Connector.
 
 Falcor will come back in a bit, in the User Interaction portion...which starts right here!
 
@@ -176,14 +176,14 @@ Falcor will come back in a bit, in the User Interaction portion...which starts r
 
 ---
 
-###User Interactions
+### User Interactions
 Everything in Tableau starts by connecting to data...so that’s where I will start too.
 
 Something Tableau needs to do better is to make it easier to connect to data. Yes, the data source list is expansive, but I shouldn’t have to download a driver to make it work. If I don’t have it, Tableau should fetch it for me and ask me to install it.
 
 Now that I can connect to data, let’s talk about that experience. Access to data implies a few things: access data tables/views inside a single database; and data across multiple sources. But is it possible to couple this data together quickly and easily (94)? **No.**
 
-###Will it Blend?
+### Will it Blend?
 
 To do meaningful analysis, you often need data from multiple sources. If you need to cross data sources or DB instances, blending is a fantastic option. But what about data that resides in the same DB, but isn’t necessarily in the reporting database (perhaps it is in some sort of sandbox area)? Right now, Tableau forces you to blend that data.
 
@@ -199,13 +199,13 @@ While awesome by itself, an In-DB capability isn’t enough. Users need to be ab
 
 I know Tableau likes to build things themselves, and they’ve done well so far...but it is time to grow up. Spend some capital and jump the line.
 
->###Recommendation 5: Acquire Alteryx and build an integrated data management and reporting platform.
+> ### Recommendation 5: Acquire Alteryx and build an integrated data management and reporting platform.
 
 [**Update: During the TC15 Keynote Tableau announced the forthcoming ability to run federated queries.** 2/5]
 
 ---
 
-###Maps
+### Maps
 
 Early in this missive, I mentioned that Tableau cheats to get some of its performance. Maps is where it is most prominent. How so?
 
@@ -238,7 +238,7 @@ Those are all great for plotting, querying, and comparing; but what about some n
 
 That’s all well and good, but can they play nice together? Yes: Tableau Desktop and Server is all Javascript and AJAX, so is Mapbox.
 
->###Recommendation 6: Tableau should replace it’s mapping infrastructure with a full Mapbox GL integration.
+> ### Recommendation 6: Tableau should replace it’s mapping infrastructure with a full Mapbox GL integration.
 
 For this to work, Tableau will need to a) allow for the transformation of it’s structured data into GeoJSON and b) create a new class of calculation focusing on geographic functions. The good news, GeoJSON isn’t that far from XML/JSON and Mapbox is a well-documented platform. Eventually we might get something like this, but instead of buttons we can use filters, parameters, and actions:
 
@@ -248,7 +248,7 @@ For this to work, Tableau will need to a) allow for the transformation of it’s
 
 ---
 
-###Production
+### Production
 
 Beyond the technical capability to do work is the actual doing. The part where an analyst works their craft.
 
@@ -257,7 +257,7 @@ If you are doing any type of analysis, there are two important components to con
 Without documentation, it is impossible to understand what steps were taken or, more importantly reproduce those steps. Reproducibility permits alternate lines of questioning and deeper reasoning by individuals with different experiences and backgrounds (61). Peer Review and Reproduction is the core of all good analytic work.
 Is there a model we can look to for this? Yes. [Palantir](https://www.palantir.com/2013/05/how-palantir-gotham-enables-effective-audit-log-analysis/) (remember them?) records all analytic activity all the time. This record can then be analyzed within the tool itself or shared out to external collaborators.
 
->###Recommendation 7: Tableau should expose an immutable activity log, in a form that Tableau can consume.
+> ### Recommendation 7: Tableau should expose an immutable activity log, in a form that Tableau can consume.
 
 The second component is collaboration. If you have a log, people can see your work and build from there. Everyone contributes, answers are better, the process is more efficient. Logging is necessary, but not sufficient, to the collaborative process.
 
@@ -267,7 +267,7 @@ In a previous post, I detailed how Git and Tableau work together. In practice (w
 
 But, Tableau can always change how the XML is read and written. It’s their platform.
 
->###Recommendation 8: Tableau should add native integration with Git - or any version control system.
+> ### Recommendation 8: Tableau should add native integration with Git - or any version control system.
 
 This solves a few problems all at once. It gives you true version control, and if you save the log simultaneously, it obviates the need for auto-save. As long as you can commit changes seamlessly, anyone can follow your work, audit it, reproduce it, and expand upon it.
 
@@ -275,7 +275,7 @@ This solves a few problems all at once. It gives you true version control, and i
 
 ---
 
-###Consumption
+### Consumption
 
 There is nothing more frustrating than building a great dashboard, only to be foiled by how Server renders it and allows people to consume it.
 
@@ -283,7 +283,7 @@ After much thought, I’ve come to the conclusion that Server **is not and shoul
 
 Making this more difficult is the Tableau community’s continued hesitance to embrace HTML and JS. I understand, it is difficult to break into, but the community is cutting themselves off from a massively useful resource. Therefore, Tableau needs to make it easier for users to build custom consumption environments that natively interact with Tableau’s APIs.
 
->###Recommendation 9: The next generation of Tableau Server should be based on Polymer and Web Components that have built-in integrations with the REST and JS APIs.
+> ### Recommendation 9: The next generation of Tableau Server should be based on Polymer and Web Components that have built-in integrations with the REST and JS APIs.
 
 Polymer is a Google-developed library that makes it easy to build modern web applications. How easy? It is essentially Legos for the web. Want a slider? Drop in a slider. Want animation, one line of code. Want hovers and shadows? Polymer comes pre-built with Material Design, Google’s best practices for web-based UI. It is also responsive out-of-the-box; infinitely skinnable; and easy to extend. Build what you need, drop it in, and you are good to go.
 
@@ -305,7 +305,7 @@ It should be that simple. No code, just build and deploy exactly how you want.
 
 ---
 
-##That’s it.
+## That’s it.
 
 Looking back on the origin of Tableau is instructive for what should be next. It should be easier to get to data, structure it, analyze it, collaborate, and publish.
 
@@ -315,8 +315,8 @@ The mission now, as it was then, is about empowering people with their data. Mak
 
 Thank you Tableau, for building such a great product already. It’s time to make it better, and now you know how.
 
-#You are welcome
+# You are welcome
 
 ![Zen](https://cmtoomey.github.io/img/fut-1443570810-1.png)
 
-#You know where to find me
+# You know where to find me

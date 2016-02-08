@@ -15,7 +15,7 @@ That may be true, but what if I told you that you can have REAL Tableau version 
 
 **TL:DR** Tableau is XML (which is code). GitHub is a repository for storing and managing code as it is produced. Tableau + Github = a place to store all your Tableau work, track your changes, and share with others. Oh – and you can automate the flow of data to and from GitHub.
 
-###What is GitHub?
+### What is GitHub?
 
 GitHub is a web-based code-sharing and repository (or repo for short) service. At the core of GitHub is Git - a version control system that allows users to clone a repo to your local computer (that’s where your project lives), make and save edits, and then upload your changes. GitHub also provides access control and collaboration features so that users across the world can work on the same project simultaneously.
 
@@ -23,7 +23,7 @@ Each set of changes is called a [commit](https://git-scm.com/docs/git-commit). C
 
 You can also create [branches](https://git-scm.com/docs/git-branch), which are parallel paths used for new features or tests. Once a branch is compete, it can then be [merged](https://git-scm.com/docs/git-merge) back into the master. Merges can be done automatically, but when other people are working on the same codebase, the best practice is to ask for a [pull request](https://help.github.com/articles/using-pull-requests/), so that other people can check your work before it gets integrated.
 
-###Flowing with GitHub
+### Flowing with GitHub
 GitHub has spent some time thinking about how to do work efficiently. Their easy-to-follow solution is called the [GitHub Flow](https://guides.github.com/introduction/flow/index.html). The basic premise is that your core work lives on *master* and all updates or other features live on *branches*. This way, you can always work, test, make updates, and publish fast. It supports individual and team-based projects and ensures that everyone's work gets checked, but can be fixed fast if necessary.
 
 It looks something like this:
@@ -40,13 +40,13 @@ There are a few rules:
 6. Merge and deploy to production.
 7. Rinse and Repeat.
 
-###So how does one get started with GitHub?
+### So how does one get started with GitHub?
 
 It's possible that you already have Git installed on your computer. To make things easier, you can get a copy of GitHub's new desktop client for either [Windows or Mac](https://desktop.github.com/).  Install the client and sign up for a GitHub account. If you aren't prompted, you can go [here](https://github.com/) to sign up.
 
 You can start your own repo, or you can leverage other people's work. Before we start our own project, let's start with some existing work.
 
-####Cloning and Forking: Jump right in!
+#### Cloning and Forking: Jump right in!
 
 [Cloning](https://help.github.com/articles/cloning-a-repository/) a repo downloads a complete copy of the project directly onto your desktop. You can only clone if the repo is public or if you are a listed contributor on the project. All your commits are pushed up to the original repo, so it is best to branch off so as not to mess up the original work.
 
@@ -54,7 +54,7 @@ You can start your own repo, or you can leverage other people's work. Before we 
 
 Anyone can clone, fork, or contribute with just a few clicks. **It's collaboration all around!**
 
-####Starting your own project
+#### Starting your own project
 
 Before you can do anything, you need a place to put your stuff, your very first repo.
 
@@ -99,4 +99,4 @@ I can get a similar view in my GitHub application, simply by clicking on History
 
 Ok – that’s enough to get started with. You know the basics of GitHub and how to get started with it using Tableau. There’s a lot more to come in – branching, merging, collaboration, and how to handle conflicts. I’ll also go through how to use the git command line (gasp!) – which is essential for doing some advanced workflows.
 
->#####UPDATE: While Tableau announced Version Control at #DATA15, my personal opinion is that this is equivalent to saving V1, V2, V3 of your workbook...except it's being saved on Tableau Server. Hopefully they are only managing diffs between workbooks! We still don't have a solution for true multi-user collaboration on a workbook...hence the continued existence of this post!
+> ##### UPDATE: While Tableau announced Version Control at #DATA15, my personal opinion is that this is equivalent to saving V1, V2, V3 of your workbook...except it's being saved on Tableau Server. Hopefully they are only managing diffs between workbooks! We still don't have a solution for true multi-user collaboration on a workbook...hence the continued existence of this post!

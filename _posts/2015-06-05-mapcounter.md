@@ -5,7 +5,7 @@ title: Native Filled Maps?
 category: Mapping
 tags: [ 'maps', 'firebird', 'hack' ]
 ---
-##A Counterpoint: It's either ok to hack, or its not.
+## A Counterpoint: It's either ok to hack, or its not.
 
 First, credit where credit is due. Cheers, Craig!
 
@@ -15,7 +15,7 @@ That is an excellent showcase of Alteryx+Tableau solving a very real (and very f
 
 As a token of my appreciation, I’ve got a small gift for you and your readers. But before I hand it over (and it really is a token) - I’d like to present a few counterpoints.
 
-###The world changes, but it really stays the same
+### The world changes, but it really stays the same
 
 I get that Tableau doesn't support the same geographic hierarchies for everywhere in the world, but that's just a matter of time and available data. If you need that information, pull it off of [OpenStreetMap](http://overpass-turbo.eu/) and then write it directly into Firebird. Or better yet, contribute that data into OSM and then tell Tableau it's ready to go. That helps everyone.
 
@@ -27,7 +27,7 @@ Custom geography is a whole other story. Their role in a particular analysis or 
 
 All of that is to say, I get the question, but for non-custom geographies, the tools are out there and Tableau users are smart - so help yourself. This means this is less about maps and more about hacking.
 
-###Hacking Tableau is about opportunity for improvement.
+### Hacking Tableau is about opportunity for improvement.
 
 I question the following statement:
 
@@ -37,7 +37,7 @@ I question the following statement:
 
  I want Tableau's maps to be better, have better data, better styling, and easier access to change all of those things. I want to keep all the standard shapes that Tableau ships with with AND have my own too. I want to add what I want, when I want. If that requires a hack, it's all unsupported anyway, so you'd be better off seizing the opportunity to solve the underlying problem.
 
-###What are you really after?
+### What are you really after?
 
 I do understand the desire to have my (or your) geographies within Tableau Desktop and integrated with that data…but I think that’s not actually the point of the question.
 
@@ -49,7 +49,7 @@ Maps are all about context - how the world looks and is organized at any given p
 
 All of this goes back to my original post - that not everything needs to be done within the confines of Tableau’s UI and toolset. It’s not about what **Tableau can do**, it’s about what **you can do with Tableau**.
 
-###A Small Gift
+### A Small Gift
 
 Now that you have finished reading - here’s the gift. Part of the new Alteryx macro requires you to run a series of batch scripts to create, lock, and unlock your new fancy Firebird DB. If you were going to use this macro just once, you would just run them by clicking.
 But if you use it as Craig intends, you’ll want the unlock/lock phase automated. So I did that. Here’s how it works.

@@ -7,7 +7,7 @@ tags: [ 'maps', 'firebird' ]
 ---
 After Craig Bloodworth’s [fantastic post on native filled maps](http://www.theinformationlab.co.uk/2015/06/01/uk-filled-map-geocoding-pack-for-tableau/), and his announcement of a forthcoming post on using Alteryx to create new shapes, one of my colleagues asked me how it worked and asked me why we hadn’t done something like that already.  Challenge accepted!  2.5 hours later - here’s what I know and what I think about how it might all work.
 
-##What you need to know
+## What you need to know
 
 All of Tableau’s Geospatial data lives in a Firebird DB (C:\\Program Files\\Tableau\\Tableau ##\\Local\\Data\\Geocoding.fdb).
 
@@ -37,9 +37,9 @@ Heuristics is the set of rules used to identify fields as geographic - it’s al
 
 Anything with a LocalData-prefix is where the points and shapes live. They are stored as a [BLOB sub_type_1.](https://www.ibphoenix.com/resources/documents/general/doc_54) This means it’s just text, wrapped with a MULTIPOLYGON tag. It looks like this: MULTIPOLYGON (((LONG(1) LAT(1), LONG(2) LAT(2), etc))).
 
-###How I think it works
+### How I think it works
 
-#####{Including updates following [Craig's big reveal](http://www.theinformationlab.co.uk/2015/06/05/using-alteryx-to-create-tableau-filled-maps/)}
+##### {Including updates following [Craig's big reveal](http://www.theinformationlab.co.uk/2015/06/05/using-alteryx-to-create-tableau-filled-maps/)}
 
 If you think about the basic features of this type of tool, it has to be doing the following:
 
