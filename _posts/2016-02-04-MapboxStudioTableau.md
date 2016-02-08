@@ -1,7 +1,7 @@
 ---
 layout: post
 section-type: post
-title: Ultimate Mapping Guide Part 1 - Click, Drag, Drop, GO!
+title: Ultimate Mapping Guide Part 1 - How Tableau and Mapbox work together
 category: maps
 tags: [ 'mapbox', 'tutorial' ]
 ---
