@@ -12,13 +12,13 @@ Something like [AirBnB's](https://www.airbnb.com/) rental search. Move or zoom t
 
 ![zoom](https://cmtoomey.github.io/img/zoomfilter.gif)
 
-###Why would you want something like this?
+### Why would you want something like this?
 
 While clicking or lassoing a group of marks based on some visual attribute is a very simple and effective interaction, it's usually the second (or third) interaction we've made with data on a map, the first being a pan or a zoom. These two interactions let us explore our data quickly, but also creates a very clear sense of context. I use that last word on purpose - beyond the geophysical bounding of data, context in Tableau implies filtering. Given that panning and zooming are visually filtering data out of our field of view, it isn't a stretch to expect Tableau to provide the means to capture and extend that filter to other views. Otherwise, we're just seeing and not really understanding.
 
 ---
 
-###Art of the possible
+### Art of the possible
 
 Let's see what's currently possible with Tableau. I've made a very basic two-pane dashboard, using the Superstore extract. One the left is summary sales and on the right is a map with Country and State in the Level of Detail. I've set the Map to "Use as Filter."
 
@@ -34,7 +34,7 @@ There are no latitude and longitude values being passed into the worksheet, desp
 
 ---
 
-##Tableau Geodata
+## Tableau Geodata
 
 The key to this problem is the *(generated)* portion of the latitude and longitude we use in the map. Behind the scenes, Tableau is using a set of built-in data connections (.TDS) to query a Firebird database that ships with every copy of Tableau Desktop.
 
@@ -66,7 +66,7 @@ Alright, if Tableau doesn't do it, and isn't planning to do it in the near futur
 
 ---
 
-##Javascript FTW
+## Javascript FTW
 
 Given that Tableau's geodata is a bit of a pain, let's say your data already has lat/long in it (Pro Tip: go download the [Earthquake data from Tableau Public](https://public.tableau.com/s/sites/default/files/media/Resources/Mag6PlusEarthquakes_1900-2013.xlsx)).
 
@@ -320,9 +320,9 @@ For a little extra credit, I decided to tie a radio button to the dashboard. The
 
 ---
 
-##touchdown!!
+## touchdown!!
 
-Just because Tableau doesn't do something "out of the box," doesn't mean it can't be done - so clone it, fork it, just don't be afraid of it. 
+Just because Tableau doesn't do something "out of the box," doesn't mean it can't be done - so clone it, fork it, just don't be afraid of it.
 
 That may seem like a lot of code - but it's mostly boilerplate that I copied and pasted from Tableau and Mapbox documentation. I used Mapbox GL because it was the easiest to use, but you could do the same thing with Mapbox JS, Leaflet, ESRI, and Google Maps. I've posted the entire codebase to [Github](https://github.com/cmtoomey/TableauMapboxEarthquake) and you can play with the demo [here](http://cmtoomey.github.io/TableauMapboxEarthquake/). There's a few other nuggets in there that weren't ready for primetime (meaning they might break Tableau Public :grin:), so feel free to explore.
 
