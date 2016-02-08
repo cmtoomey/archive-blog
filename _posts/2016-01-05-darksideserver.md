@@ -16,17 +16,17 @@ You want remote access, full automation, and the easier interactions with your T
 
 ---
 
-#Welcome to the Dark Side
+# Welcome to the Dark Side
 
 ![Vader](https://cmtoomey.github.io/img/vader.gif)
 
-###Warning: Everything below this line is completely unsupported!
+### Warning: Everything below this line is completely unsupported!
 
 If you are like me, I want to automate everything, and Remote Desktop is such a pain. I want to write a script, schedule it, and run it from anywhere - for all the things.
 
 <span title="You can also do this with Powershell">Today, you'll see that [three letters](https://technet.microsoft.com/en-us/magazine/ff700227.aspx) will set you free from (almost) everything that is painful about Tableau Server.</span>
 
-##SSH
+## SSH
 
 SSH stands for [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell) and it's a method to login and execute commands remotely. Once you are authenticated, you can run programs, download and install software, and transfer files (among many other things). These connections are encrypted via a public key system, so only the NSA is listening. You never have to use Remote Desktop again. SSH + tabadmin solves (almost) everything.
 
@@ -62,7 +62,7 @@ Here's how it works.
 
 ---
 
-###Installation
+### Installation
 
 To start, you'll need to access to a Tableau Server. Any version, doesn't matter (just not your production box). I know I said you wouldn't have to use Remote Desktop ever again, but that's not entirely true. You do only have to do it once.
 
@@ -78,17 +78,17 @@ Now that the server is installed and running, you need to get yourself setup.
 
 ---
 
-###Setup
+### Setup
 
 To actually use SSH, you need a client that can run the SSH protocol.
 
 Life is a little bit different for Windows and Mac users, so I'll cover both separately.
 
-####Mac users
+#### Mac users
 
 Hit ⌘ - Space and type Terminal. That's it. OSX is built on UNIX, of which SSH is a core service, so Terminal can handle SSH out-of-the-box. This is what I'll be using for the rest of this post.
 
-####Windows users
+#### Windows users
 
 Life is a little more complicated for Windows users. You can't just open CMD and type SSH, you need another piece of software. There are lots of options, but FREE is always better, so I'm going to show you how to use [Cygwin](https://cygwin.com/install.html). Cygwin is a group of tools that give Windows users a Linux-like experience. Like Bitvise, it's straightforward to get setup. **Note: there is a free version, which I'll be showing you, but also a commercially-supported one by [RedHat](http://www.redhat.com/services/custom/cygwin/).**
 
@@ -122,7 +122,7 @@ Now you can do all your favorite windows and Linux-like things from your command
 
 ---
 
-###SSH in action
+### SSH in action
 
 Now that you are all setup, let's take our new toy for a spin. You need three things to make this work:
 
@@ -150,7 +150,7 @@ You're in luck - SSH is designed to do just this. It's called Public Key Authent
 
 ---
 
-###Creating and Deploying a Public Key
+### Creating and Deploying a Public Key
 
 Here's how this works. You are going to create a keypair, with a public half and a private half. We are going store the private half on our machine, and place the public half on the remote machine we want access to. SSH will read your private key, check it against the public key, and if they match, you are authenticated.
 
@@ -164,7 +164,7 @@ The general process is as follows:
 
 Ready?
 
-####Create a keypair
+#### Create a keypair
 
 I'll walk you through the steps, which I found in this handy video from [Tuts+](https://www.youtube.com/watch?v=-J9wUW5NhOQ).
 
@@ -196,7 +196,7 @@ cat id_rsa.pub
 
 That's it, you're all keyed up. Now the homestrech, making BitVise recognize the key.
 
-####SSH + SCP FTW
+#### SSH + SCP FTW
 
 To do this, we need to make a few changes to BitVise on our Tableau Server and then copy our key over. Specifically, we need this box to get checked.
 

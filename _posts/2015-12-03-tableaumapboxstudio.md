@@ -17,7 +17,7 @@ tags: [ 'maps', 'mapbox','conference' ]
 
 For those of you who were at Tableau Conference 2015, one of the more exciting announcements was the native integration of [Mapbox](https://www.mapbox.com/) into Tableau. What was first a hack pioneered by [Zen Master Craig Bloodworth](http://www.theinformationlab.co.uk/2014/01/21/information-lab-brings-new-mapping-tableau/) of the Information Lab and perfected by [Zen Master Anya A’Hearn of Datablick](http://datablick.com/2015/02/04/fast-and-fabulous-custom-maps-using-mapbox-in-tableau/) is now part of Tableau itself.
 
-###This is a big deal
+### This is a big deal
 
 Why? Two reasons:
 
@@ -26,7 +26,7 @@ Why? Two reasons:
 
 If by this point, you haven’t gotten your hands-on the beta, do it now! Everything you see here applies to all versions of Tableau, but 9.2 is where it’s all native.
 
-###How Tableau and Mapbox play nicely
+### How Tableau and Mapbox play nicely
 
 If you attended Anya A’Hearn and Allan Walker’s talk at #Data15, you may have seen one [Matt Irwin](https://twitter.com/mtirwin) on stage, talking about who Mapbox is and what they do. The key point to remember is that while Mapbox helps you produce beautiful maps, they are largely an API company. They want to help you move and interact with your geographic data, and maps are just the most visible part of that goal.
 
@@ -42,7 +42,7 @@ All you have to do is follow Tableau’s instructions, courtesy of Tableau’s o
 
 ![Instructions](https://cmtoomey.github.io/img/screenshot-1449167702-68.png)
 
-###Let's see how that works
+### Let's see how that works
 
 I log in and see what happens
 
@@ -66,7 +66,7 @@ Mapbox has a [great styling tutorial](https://www.mapbox.com/help/getting-starte
 
 Except, if I upload to Mapbox.com after uploading, it’s not really apparent what to do next. **Where’s my stuff?!?**
 
-###MapboxGL and Studio
+### MapboxGL and Studio
 
 Here’s what happened. About the same time as Tableau announced the Mapbox integration, Mapbox announced a new platform. The new design environment is called [Studio](https://www.mapbox.com/blog/announcing-mapbox-studio/), and it’s built on a technology called MapboxGL. Zoom based Styles, easy color control, custom fonts, languages, the list goes on and on.
 
@@ -82,7 +82,7 @@ So once you’ve done that, follow Kent’s instructions for 9.2 or Anya’s for
 
 ---
 
-#What if you want the new hotness?
+# What if you want the new hotness?
 
 Tableau users expect the latest and greatest, they want it to be easy, and they want it NOW! So I (and Anya and Allan) asked Tableau if it was possible. Here’s the gist of their response.
 
@@ -96,7 +96,7 @@ To the user, the end result may be a map, but behind the scenes, Classic and GL 
 
 That’s a totally understandable explanation...but there has to be a way to make it work.
 
-###There is
+### There is
 
 Here’s a style from my Mapbox account (and proof that it wasn’t duped in Classic).
 
@@ -112,7 +112,7 @@ and 9.2.
 
 ---
 
-###There you have it
+### There you have it
 
 Right now, this is a hack that isn’t available to everyone...but hopefully it will be very soon (maybe it will be supported!).
 
