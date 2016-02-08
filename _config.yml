@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "https://panossakkos.github.io"
+url: "https://cmtoomey.github.io"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -12,11 +12,11 @@ url: "https://panossakkos.github.io"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: /personal-jekyll-theme
+# baseurl: /personal-jekyll-theme
 
 # Google tracking id to track your visitors
 
-google-tracking-id: "UA-35880426-4"
+google-tracking-id: "UA-71148817-1"
 
 # Forces https everywhere in your website, except when you serve it locally
 # If you are not hosted on Github Pages, and your host doesn't support https
@@ -29,18 +29,16 @@ force-https: True
 #############
 
 lang: "en"
-author: "John Smith"
-title: "{ John Smith }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+author: "Chris Toomey"
+title: "{ Tableauing Dangerously }"
+description: "Tableau-centric blog on building all the awesome things, code or no-code"
+keywords: "chris, toomey, tableau, alteryx, d3, analysis, awesome"
 favicon: "/img/favicon.ico"
-404-img: "/img/labtocat.png"
+404-img: "/img/utini.gif"
 
 ################
 # Header layout #
 ################
-
-black-favicon: "/img/black-lab-glass.ico"
 
 background-img: "../img/intro-bg.jpg"
 
@@ -49,17 +47,17 @@ background-img: "../img/intro-bg.jpg"
 ##############################
 
 dynamic-typing: True
-shuffle: True # Shuffle the lines.
+shuffle: False # Shuffle the lines.
 loop: True
 loop-count: False # Set False for infinite loop, or set any number for finite loop.
 type-speed: 10
-start-delay: 200
-delete-delay: 5000
+start-delay: 2500
+delete-delay: 3000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
-  - text: "Where’s your will to be weird?"
+  - text: "Learn enough to be dangerous"
+  - text: "Then build something awesome"
 
-me-img: "/img/jetpacktocat.png"
+me-img: "/img/helmet.jpg"
 
 ################
 # Web app mode #
@@ -69,18 +67,18 @@ web-app-mode: True
 
 # Icons for Web App mode
 
-icon-36p: "/img/web-app/icon-36p.png"
-icon-48p: "/img/web-app/icon-48p.png"
-icon-72p: "/img/web-app/icon-72p.png"
-icon-96p: "/img/web-app/icon-96p.png"
-icon-144p: "/img/web-app/icon-144p.png"
-icon-192p: "/img/web-app/icon-192p.png"
+icon-36p: "/img/web-app/helmet-36p.png"
+icon-48p: "/img/web-app/helmet-48p.png"
+icon-72p: "/img/web-app/helmet-72p.png"
+icon-96p: "/img/web-app/helmet-96p.png"
+icon-144p: "/img/web-app/helmet-144p.png"
+icon-192p: "/img/web-app/helmet-192p.png"
 
 ########
 # Blog #
 ########
 
-post-preview-words: 96
+post-preview-words: 60
 
 paginate: 5
 
@@ -91,11 +89,11 @@ linkedin-share: True
 reddit-share: True
 google-plus-share: True
 tumblr-share: True
-pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+#pinterest-share: True
+#pocket-share: True
+#vkontakte-share: True
 
-disqus-shortname: "panossakkos"
+disqus-shortname: "cmtoomey"
 
 syntax-highlight: True
 
@@ -104,22 +102,31 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
-    date: "September 2013 - Today"
-    description: "Saving the neighborhood!"
-  - image: "/img/timeline/baracktocat.jpg"
-    date: "September 2007 - August 2013"
-    description: "Started coding"
+  - image: "/img/timeline/slalom.png"
+    date: "March 2104 - Today"
+    description: "Joined Slalom"
+  - image: "/img/timeline/married.jpg"
+    date: "July 2010"
+    description: "Married the woman of my dreams"
+  - image: "/img/timeline/pnnl.png"
+    date: "June 2008 - February 2014"
+    description: "Worked for Pacific Northwest National Laboratory"
+  - image: "/img/timeline/lse.png"
+    date: "September 2008 - August 2009"
+    description: "Graduate School at London School of Economics"
+  - image: "/img/timeline/default.jpg"
+    date: "September 2004 - August 2008"
+    description: "Attended University of Washington"
 
 # First image of the Timeline
 
-timeline-img: "/img/timeline/default.png"
+timeline-img: "/img/timeline/bomber.jpg"
 
 ###########
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "chris.toomey@slalom.com"
 
 ##################
 # Social Buttons #
@@ -127,13 +134,11 @@ email: "your@email.here"
 
 social:
   - title: "facebook"
-    url: "https://facebook.com/"
+    url: "https://www.facebook.com/chris.toomey"
   - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://twitter.com/Sock1tToomey"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+    url: "https://github.com/cmtoomey"
   - title: "rss"
     url: "/feed.xml"
 
@@ -141,7 +146,7 @@ social:
 # 404 page #
 ############
 
-404-img: "/img/labtocat.png"
+404-img: "/img/utini.gif"
 
 ################################################################################
 
@@ -170,3 +175,4 @@ sass:
 
 gems:
   - jekyll-paginate
+  - jemoji
