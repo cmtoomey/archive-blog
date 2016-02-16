@@ -28,7 +28,7 @@ Let's get started!
 
 ---
 
-Mapbox and Tableau have always played well together, starting with Craig's original TMS hack. Starting with 9.2, Tableau supports Mapbox Studio Classic styles out of the box. 9.3 is adding the ability to use maps built in Mapbox's fancy new Studio. Since Studio is the new hotness, and nobody wants to write CartoCSS, everything we are goign to show you will be using Mapbox Studio and Tableau 9.3.
+Mapbox and Tableau have always played well together, starting with Craig's original TMS hack. Starting with 9.2, Tableau supports Mapbox Studio Classic styles out of the box. 9.3 is adding the ability to use maps built in Mapbox's fancy new Studio. Since Studio is the new hotness, and nobody wants to write CartoCSS, everything we are going to show you will be using Mapbox Studio and Tableau 9.3.
 
 Here's the setup - I'm a huge college football fan, and I want to know where my fellow Dawgs live. That way, I know where I can wear my purple and gold safely. Back in 2014, [The NYTimes Upshot](http://nyti.ms/1CIhun0) published this great map of which ZIP codes love which teams.
 
