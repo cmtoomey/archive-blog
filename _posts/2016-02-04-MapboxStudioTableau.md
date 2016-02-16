@@ -16,7 +16,7 @@ Here's what we are going to cover:
 
 ### Part 1: How Tableau and Mapbox work together
 
-### Part 2: How to Build your Map
+### [Part 2: Styling Mapbox Maps](http://www.theinformationlab.co.uk/2016/02/16/ultimate-mapping-guide-part-2-styling-mapbox-maps/)
 
 ### Part 3: Extend your Map with YOUR data
 
