@@ -1,7 +1,7 @@
 ---
 layout: post
 section-type: post
-title: Ultimate Mapping Guide Part 3 - Bring Your Data
+title: Ultimate Mapping Guide Part 3 - Bring Your Own Data
 category: Mapping
 tags: [ 'mapbox', 'tutorial' ]
 ---
