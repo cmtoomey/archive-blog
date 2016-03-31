@@ -96,4 +96,15 @@ As you move around you'll see green boxes and red boxes. If it's red, that means
 
 ![top](https://i.imgur.com/Nan5Goe.gif)
 
+Perfect labels! 
+
+---
+
+## Testing 
+
+If you follow all of Craig and I's instructions, you'll have spent a lot of time building an amazing map. Wouldn't it be great if you could preview how it will look before you put it in Tableau? That way, if something isn't right, you can fix it on the spot without dealing with Tableau's cache. 
+
+Mapbox doesn't have a "Preview as Tiles" button anywhere (at least not one I could find), so I built a [small web app](http://cmtoomey.github.io/MapboxTableauTesting/) to do it for you. All you have to do is copy the same Style URL you need for Tableau and it will take care of the rest. It looks like this:
+
+![testing](https://cmtoomey.github.io/img/StyleTest.gif)
 
