@@ -22,3 +22,13 @@ All you need to do is paste in the Style URL from Mapbox Studio and Tableau will
 
 ![styleurl](https://cmtoomey.github.io/img/FindMapboxButton.gif)
 
+Give your style a name and that's it. You can add as many of these maps as you want, just like your Classic Styles. However, unlike Classic, you can't toggle the layers of your map on and off (more on that in a bit). 
+
+### But what if it something doesn't look quite right? 
+
+Perhaps something like this? 
+
+![clipping](https://cmtoomey.github.io/img/Clipping.png)
+
+
+
