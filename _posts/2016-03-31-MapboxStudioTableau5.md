@@ -50,5 +50,6 @@ Let's see if this is actually the issue for this particular map.
 
 ![tiletest](https://cmtoomey.github.io/img/DebugTilesClips.gif)
 
- 
+There it is, the labels just barely cross over into another tile. If you look around you'll probably see that this happens in a few other plans (or doesn't). As of right now, Mapbox is aware of the tile clipping issue, and there is a fix underway. In the meantime, now that you know where the problem is, you can email [Support](mailto:help@mapbox.com), give them the style ID and the tiles and they can help you with a fix. 
 
+ 
