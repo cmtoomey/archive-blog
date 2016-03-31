@@ -18,9 +18,9 @@ Here's what we are going to cover:
 
 ### [Part 2: Styling Mapbox Maps](http://www.theinformationlab.co.uk/2016/02/16/ultimate-mapping-guide-part-2-styling-mapbox-maps/)
 
-### Part 3: Extend your Map with YOUR data
+### [Part 3: Extend your Map with YOUR data](https://cmtoomey.github.io/mapping/2016/02/22/MapboxStudioTableau3.html)
 
-### Part 4: Up your Styling Game
+### [Part 4: Next-Level Styles](http://www.theinformationlab.co.uk/2016/03/31/ultimate-mapping-guide-part-4-next-level-styles/)
 
 ### Part 5: Troubleshooting
 
