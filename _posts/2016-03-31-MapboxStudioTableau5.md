@@ -14,3 +14,11 @@ Home stretch - here we go!!!
 
 ---
 
+Let's do the first thing first - your map is beautiful, has been approved by everyone and now you want to see it in Tableau. Now with 9.3, you can use it out of the box (no TMS hacking anymore!). Go through the same process of Map, Background Maps, Map Services, Add Mapbox Map and you will be presented with a fancy new box. 
+
+![newbox](https://www.mapbox.com/help/img/3rdparty/tableau-5.png)
+
+All you need to do is paste in the Style URL from Mapbox Studio and Tableau will take care of the rest. Where might you find the Style URL? Right here:
+
+![styleurl](https://cmtoomey.github.io/img/FindMapboxButton.gif)
+
