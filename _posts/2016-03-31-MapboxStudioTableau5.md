@@ -85,7 +85,7 @@ Clipping aside, you can run into issues with labels being too close, or not appe
 
 ![crowded](https://c2.staticflickr.com/2/1564/26067701156_3a19878b96_o.png)
 
-The good news here is that Mapbox just turned on a new feature for **all new maps** that will make labeling even easier. It's called compositing and I'll let you read about it [here](https://www.mapbox.com/blog/better-label-placement-in-mapbox-studio/). If you have an exiting style, you'll have to turn this feature on in the Debug menu. 
+The good news here is that Mapbox just turned on a new feature for **all new maps** that will make labeling even easier. It's called compositing and I'll let you read about it [here](https://www.mapbox.com/blog/better-label-placement-in-mapbox-studio/). If you have an existing style, you'll have to turn this feature on in the Debug menu. 
 
 But what if your labels just aren't showing up where you want them to? Maybe they are blanking out or something else is taking their place? 
 
@@ -115,7 +115,9 @@ It's location aware and will zoom to your location, and has the geocoder open so
 
 ### Layer Switching 
 
-A lot of people have been asking if you can do layer switching with the new Studio maps. A little background, the Queen Mapboxer, Anya A'Hearn published this [blog post](http://datablick.com/2015/11/28/easy-peasy-lemon-squeezy-mapbox-maps-and-layers-in-tableau-9-2/) about using multiple Mapbox layers in Tableau. This method is built on top of Mapbox Studio Classic, and allows you to toggle individual data layers on and off in Tableau's UI, like so:
+A lot of people have been asking if you can do layer switching with the new Studio maps. 
+
+A little background, the Queen Mapboxer, Anya A'Hearn published this [blog post](http://datablick.com/2015/11/28/easy-peasy-lemon-squeezy-mapbox-maps-and-layers-in-tableau-9-2/) about using multiple Mapbox layers in Tableau. This method is built on top of Mapbox Studio Classic, and allows you to toggle individual data layers on and off in Tableau's UI, like so:
 
 ![anya](http://i1.wp.com/datablickmedia.s3.amazonaws.com/wp-content/uploads/2015/11/28002929/Toggle-Layers.png)
 
