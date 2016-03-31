@@ -108,3 +108,16 @@ Mapbox doesn't have a "Preview as Tiles" button anywhere (at least not one I cou
 
 ![testing](https://cmtoomey.github.io/img/StyleTest.gif)
 
+It's location aware and will zoom to your location, and has the geocoder open so you can type a specific place in the world and fly there. It should work in any modern browser (Internet Explorer 9/10, Chrome, Firefox, Safari). If you have any issues, let me know! 
+
+---
+
+### Layer Switching 
+
+A lot of people have been asking if you can do layer switching with the new Studio maps. A little background, the Queen Mapboxer, Anya A'Hearn published this [blog post](http://datablick.com/2015/11/28/easy-peasy-lemon-squeezy-mapbox-maps-and-layers-in-tableau-9-2/) about using multiple Mapbox layers in Tableau. This method is built on top of Mapbox Studio Classic, and allows you to toggle individual data layers on and off in Tableau's UI, like so:
+
+![anya](http://i1.wp.com/datablickmedia.s3.amazonaws.com/wp-content/uploads/2015/11/28002929/Toggle-Layers.png)
+
+
+
+
