@@ -92,4 +92,8 @@ This happens when labels collide. Similar to how Tableau won't show (by default)
 
 ![collision](http://cmtoomey.github.io/img/DebugTilesCollision.gif) 
 
-As you move around you'll see green boxes and red boxes. If it's red, that means there is a collision and that label won't be shown. 
+As you move around you'll see green boxes and red boxes. If it's red, that means there is a collision and that label won't be shown. Determining which label wins is actually a complex process, you can read all about it [here](https://www.mapbox.com/blog/label-collisions/) if you like. The best first step is to simply bump the labels up the layer order (remember the Painter's Algorithm?). This will give those labels more weight in the collision equation. I'll let [Matt Irwin](https://www.mapbox.com/blog/labels-on-top/) show you how easy it is: 
+
+![top](https://i.imgur.com/Nan5Goe.gif)
+
+
