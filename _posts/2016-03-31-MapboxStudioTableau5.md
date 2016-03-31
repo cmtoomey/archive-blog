@@ -30,7 +30,7 @@ Perhaps something like this?
 
 ![clipping](https://cmtoomey.github.io/img/Clipping.png)
 
-You notice that the first letter is chopped off a little. This is called clipping, and it can sometimes happen when a label crosses a tile boundary. 
+You notice that the first letter of Michigan, Kentucky, and Florida State is chopped off a little. This is called clipping, and it can sometimes happen when a label crosses a tile boundary. 
 
 What's a tile? Well, let's go back to [Part 1](https://cmtoomey.github.io/maps/2016/02/04/MapboxStudioTableau.html). Both Tableau and Mapbox see the world through little boxes that measure 512px x 512 px. All those layers, colors, and styling rules (like ramping) are taken into account at every zoom level and then flattened into an image that you can see on a map. That is a map tile. 
 
@@ -46,6 +46,9 @@ It's much easier to see for yourself, so Mapbox built in a Debug menu so you can
 
 ![tiles](https://cmtoomey.github.io/img/DebugTiles.gif)
 
- 
+Let's see if this is actually the issue for this particular map. 
 
+![tiletest](https://cmtoomey.github.io/img/DebugTileClips.gif)
+
+ 
 
