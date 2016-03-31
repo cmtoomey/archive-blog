@@ -78,4 +78,13 @@ To fix this, you have to clear Tableau's cache. To do that go here and delete th
 
 > Now a word of warning: Mapbox does a little bit of caching too, to help get your tiles quickly and cheaply (so they can continue to provide all that good stuff in a free plan). That cache is like a timebomb, it expires every so often. Right now the timer is set to 5 mins. This means that if you update a style, clear your cache, and then request new tiles you might get an old one and have to start over. The good news is that I've asked Mapbox to lower that timer, and we are working with Tableau to figure out a better experience around their cache - so stay tuned. 
 
+### what about labels?
+
+Clipping aside, you can run into issues with labels being too close, or not appearing at all. Something like this 
+
+![crowded](https://c2.staticflickr.com/2/1564/26067701156_3a19878b96_o.png)
+
+The good news here is that Mapbox just turned on a new feature for **all new maps** that will make labeling even easier. It's called compositing and I'll let you read about it [here](https://www.mapbox.com/blog/better-label-placement-in-mapbox-studio/). If you have an exiting style, you'll have to turn this feature on in the Debug menu. 
+
+But what if your labels just aren't showing up where you want them to? Maybe they are blanking out or something else is taking their place? 
 
