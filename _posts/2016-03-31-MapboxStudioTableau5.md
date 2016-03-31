@@ -52,4 +52,16 @@ Let's see if this is actually the issue for this particular map.
 
 There it is, the labels just barely cross over into another tile. If you look around you'll probably see that this happens in a few other plans (or doesn't). As of right now, Mapbox is aware of the tile clipping issue, and there is a fix underway. In the meantime, now that you know where the problem is, you can email [Support](mailto:help@mapbox.com), give them the style ID and the tiles and they can help you with a fix. 
 
- 
+---
+
+## Let's talk about editing
+
+You've got your map, but now you want to make some changes: adjust the colors a little bit, add some more data, change a few labels. You publish your updates and the something like this happens. 
+
+![update](https://cmtoomey.github.io/img/StyleWontUpdate.gif)
+
+This will be (if it isn't already) the number one issue people will have with Mapbox and Tableau. What's happening is that Tableau caches the tiles it requests from the map server. It does this to keep you from burning through your map view limit, and also to provide some limited offline capability. 
+
+Remember those handy map tile coordinates I just mentioned? That's how Tableau knows what's new and what to ask for. If it doesn't have a tile with that coordinate, it will ask for a new one. That's why you see the old tiles (with blue) around the United States and new tiles (the green) around Asia. 
+
+![oldandnew](https://cmtoomey.github.io/img/GreenAndBlue.png)
