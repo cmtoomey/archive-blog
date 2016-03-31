@@ -48,7 +48,7 @@ It's much easier to see for yourself, so Mapbox built in a Debug menu so you can
 
 Let's see if this is actually the issue for this particular map. 
 
-![tiletest](https://cmtoomey.github.io/img/DebugTileClips.gif)
+![tiletest](https://cmtoomey.github.io/img/DebugTilesClips.gif)
 
  
 
