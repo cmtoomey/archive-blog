@@ -76,7 +76,8 @@ To fix this, you have to clear Tableau's cache. To do that go here and delete th
 
     username/Library/Caches/com.Tableau.caching/ExternalCacheV1/MapTiles
 
-> Now a word of warning: Mapbox does a little bit of caching too, to help get your tiles quickly and cheaply (so they can continue to provide all that good stuff in a free plan). That cache is like a timebomb, it expires every so often. Right now the timer is set to 5 mins. This means that if you update a style, clear your cache, and then request new tiles you might get an old one and have to start over. The good news is that I've asked Mapbox to lower that timer, and we are working with Tableau to figure out a better experience around their cache - so stay tuned. 
+
+> *Now a word of warning: Mapbox does a little bit of caching too, to help get your tiles quickly and cheaply (so they can continue to provide all that good stuff in a free plan). That cache is like a timebomb, it expires every so often. Right now the timer is set to 5 mins. This means that if you update a style, clear your cache, and then request new tiles you might get an old one and have to start over. The good news is that I've asked Mapbox to lower that timer, and we are working with Tableau to figure out a better experience around their cache - so stay tuned.*
 
 ### what about labels?
 
