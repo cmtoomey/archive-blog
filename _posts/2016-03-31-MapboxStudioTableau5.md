@@ -65,3 +65,17 @@ This will be (if it isn't already) the number one issue people will have with Ma
 Remember those handy map tile coordinates I just mentioned? That's how Tableau knows what's new and what to ask for. If it doesn't have a tile with that coordinate, it will ask for a new one. That's why you see the old tiles (with blue) around the United States and new tiles (the green) around Asia. 
 
 ![oldandnew](https://cmtoomey.github.io/img/GreenAndBlue.png)
+
+To fix this, you have to clear Tableau's cache. To do that go here and delete the MapTiles folder. 
+
+**Windows**
+
+    C:\Users\your-username\AppData\Local\Tableau\Caching\ExternalCacheV1\MapTiles
+
+**Mac**
+
+    username/Library/Caches/com.Tableau.caching/ExternalCacheV1/MapTiles
+
+> Now a word of warning: Mapbox does a little bit of caching too, to help get your tiles quickly and cheaply (so they can continue to provide all that good stuff in a free plan). That cache is like a timebomb, it expires every so often. Right now the timer is set to 5 mins. This means that if you update a style, clear your cache, and then request new tiles you might get an old one and have to start over. The good news is that I've asked Mapbox to lower that timer, and we are working with Tableau to figure out a better experience around their cache - so stay tuned. 
+
+
