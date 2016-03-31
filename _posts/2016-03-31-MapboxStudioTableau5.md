@@ -118,6 +118,18 @@ A lot of people have been asking if you can do layer switching with the new Stud
 
 ![anya](http://i1.wp.com/datablickmedia.s3.amazonaws.com/wp-content/uploads/2015/11/28002929/Toggle-Layers.png)
 
+You'll notice that when you add a map built in Studio, you can't see the layers. I tried replicating Anya's method by creating two styles, one with a transparent background, hacking the TMS, and showing both. The map doesn't load. 
 
+So here is the bad news: no layer switching right now, you need to rely on either multiple styles or be very diligent about your design to get the effect you want. 
 
+The good news: I know how to fix it. The method has been proven, and now I'm doing some testing with Mapbox's engineering team to figure out the best settings and how to make it available to you. Once it's tested, I'll publish it and we can all poke Kent Marten about getting it into the product. Stay tuned!!!
 
+---
+
+That's all folks! Craig and I have really enjoyed doing this series for you, and the response has been incredible. Everyone loves their maps, and now we want you to go out and make awesome stuff. While we may have told you all our secrets, please feel free to reach out to us or Mapbox if we can be of help. Thanks again for reading!!!
+
+[Chris](https://twitter.com/Sock1tToomey)
+
+[Craig](https://twitter.com/craigbloodworth)
+
+[Mapbox](https://www.mapbox.com)
