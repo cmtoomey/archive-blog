@@ -30,5 +30,22 @@ Perhaps something like this?
 
 ![clipping](https://cmtoomey.github.io/img/Clipping.png)
 
+You notice that the first letter is chopped off a little. This is called clipping, and it can sometimes happen when a label crosses a tile boundary. 
+
+What's a tile? Well, let's go back to [Part 1](https://cmtoomey.github.io/maps/2016/02/04/MapboxStudioTableau.html). Both Tableau and Mapbox see the world through little boxes that measure 512px x 512 px. All those layers, colors, and styling rules (like ramping) are taken into account at every zoom level and then flattened into an image that you can see on a map. That is a map tile. 
+
+The lowest level of zoom contains the world on a single tile. Every zoom level you go up splits the the tile into quarters, creating a grid that is 2^Zoom on a side. Now you have a bunch of tiles that need to be assembled on a map, and to make this easy, the map geniuses devised a grid system: Z/X/Y. Starting with Zoom/0/0 you go up until you reach 2^Zoom - 1 and then you go to the next row. 
+
+**Example**
+
++ Zoom level three is 8 x 8 tiles
++ The first row starts at 3/0/0 and goes 3/7/0
++ The second starts at 3/0/1 and goes to 3/7/1
+
+It's much easier to see for yourself, so Mapbox built in a Debug menu so you can actually look at the tiles and their boundaries. 
+
+![tiles](https://cmtoomey.github.io/img/DebugTiles.gif)
+
+ 
 
 
