@@ -80,7 +80,7 @@ To fix this, you have to clear Tableau's cache. To do that go here and delete th
 
 ### what about labels?
 
-Clipping aside, you can run into issues with labels being too close, or not appearing at all. Something like this 
+Clipping aside, you can run into issues with labels being too close, or not appearing at all. Something like you see on the left, but what you want is on the right. 
 
 ![crowded](https://c2.staticflickr.com/2/1564/26067701156_3a19878b96_o.png)
 
@@ -88,3 +88,8 @@ The good news here is that Mapbox just turned on a new feature for **all new map
 
 But what if your labels just aren't showing up where you want them to? Maybe they are blanking out or something else is taking their place? 
 
+This happens when labels collide. Similar to how Tableau won't show (by default) overlapping marks, Mapbox wants to keep your map looking sweet. To do this, they compute a tiny box around each label and compare boxes to ones close by. If they collide, one label will win. How can you tell if there is going to be a "label fight?" Back to the Debug menu!!
+
+![collision](http://cmtoomey.github.io/img/DebugTilesCollision.gif) 
+
+As you move around you'll see green boxes and red boxes. If it's red, that means there is a collision and that label won't be shown. 
