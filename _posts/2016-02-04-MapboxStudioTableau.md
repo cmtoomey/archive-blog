@@ -22,7 +22,7 @@ Here's what we are going to cover:
 
 ### [Part 4: Next-Level Styles](http://www.theinformationlab.co.uk/2016/03/31/ultimate-mapping-guide-part-4-next-level-styles/)
 
-### Part 5: Troubleshooting
+### [Part 5: Bringing it all together](https://cmtoomey.github.io/mapping/2016/02/22/MapboxStudioTableau5.html)
 
 Let's get started!
 
