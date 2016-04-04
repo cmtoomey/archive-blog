@@ -102,9 +102,12 @@ syntax-highlight: True
 ############
 
 events:
+  - image: "img\zillowimg.png"
+    date: "March 2104 - April 2016"
+    description: "Worked at Slalom"
   - image: "/img/timeline/slalom.png"
-    date: "March 2104 - Today"
-    description: "Joined Slalom"
+    date: "March 2104 - April 2016"
+    description: "Worked at Slalom"
   - image: "/img/timeline/married.jpg"
     date: "July 2010"
     description: "Married the woman of my dreams"
@@ -126,7 +129,7 @@ timeline-img: "/img/timeline/bomber.jpg"
 # Contact #
 ###########
 
-email: "chris.toomey@slalom.com"
+email: "christ@zillowgroup.com"
 
 ##################
 # Social Buttons #
