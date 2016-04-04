@@ -102,9 +102,9 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "img\zillowimg.png"
+  - image: "/img/timeline/zillowimg.png"
     date: "March 2104 - April 2016"
-    description: "Worked at Slalom"
+    description: "Work at Zillow"
   - image: "/img/timeline/slalom.png"
     date: "March 2104 - April 2016"
     description: "Worked at Slalom"
