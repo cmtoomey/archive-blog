@@ -466,6 +466,29 @@ If you are adventurous, you can substitute Lync (which uses the **im** protocol)
 
 + tabadmin set vizqlserver.url_scheme_whitelist slack
 
+In your URL action, you want to use the following syntax
+
+```
+slack://channel?id=[ChannelID]&team=[teamID] - this will launch you into a #channel in the Slack app
+slack://user?id=[userID]&team=[teamID] - this will open the user profile for whoever you want to chat with in the Slack app
+```
+Due to Slack's webapp restrictions, you can't actually launch the web version inside a workbook. You can open it in a separate window though, like so:
+
+```
+https://slackteamname.slack.com/messages/@user
+```
+
+How do you get the ChannelID, UserID, and TeamID?
+
+1. Get your [API token](https://api.slack.com/docs/oauth-test-tokens)
+2. Query your [team's info](https://api.slack.com/methods/team.info/test)
+3. Query your [channels' info](https://api.slack.com/methods/channels.list)
+4. Query your [user's info](https://api.slack.com/methods/users.list)
+
+You can user Slack's interface or Postman. If you want to export the list and post it somewhere for other's to use, I'd recommend Postman. 
+
+---
+
 ## So...what now?
 
 Now you know everything there is to know about Tableau Server configuration. What can you do with it?
