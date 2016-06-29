@@ -447,6 +447,25 @@ The last section will generate the URL to bind your Tableau Server to your IdP. 
 
 ---
 
+### Tableau 10 Features
+
+Now that Tableau 10 is released (or about to be - depending on when you read this), I've updated the section below with some tabadmin commands that you can use to configure Tableau Server to your heart's desire.
+The good news is that the standard configuration window hasn't changed. All those features are exactly as they were in 9.3 (with the exception of SAML, which gets a fancy drop-down instead of a check-box).
+
++ **Desktop License Reporting:** tabadmin set features.DesktopReporting true
++ **Email Notification of Extract Failure:** tabadmin set backgrounder.send_email_on_refresh_failure false
+
+**BONUS FEATURE**
+
+For those who don't know, [Paul Banoub](https://twitter.com/paulbanoub) is the Tableau Server Master. He recently [posted](https://community.tableau.com/thread/155429) about how to launch Lync sessions from within Tableau workbooks. This is a great collaboration feature that everyone should use. You can read it yourself, but here's the Tableau Server commands that make it work.
+
++ tabadmin set vizqlserver.url_scheme_whitelist sip
++ tabadmin set vizqlserver.url_scheme_whitelist im
+
+If you are adventurous, you can substitute Lync (which uses the **im** protocol), for the one Slack uses.
+
++ tabadmin set vizqlserver.url_scheme_whitelist slack
+
 ## So...what now?
 
 Now you know everything there is to know about Tableau Server configuration. What can you do with it?
