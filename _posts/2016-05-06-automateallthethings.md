@@ -454,6 +454,7 @@ The good news is that the standard configuration window hasn't changed. All thos
 
 + **Desktop License Reporting:** tabadmin set features.DesktopReporting true
 + **Email Notification of Extract Failure:** tabadmin set backgrounder.send_email_on_refresh_failure false
++ **Failure Threshold Setting (how many days old an extract can be):** tabadmin set wgserver.alerts.observed_days
 
 **BONUS FEATURE**
 
