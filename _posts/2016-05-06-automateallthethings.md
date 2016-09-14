@@ -447,6 +447,13 @@ The last section will generate the URL to bind your Tableau Server to your IdP. 
 
 ---
 
+### What about the Initial Admin User?
+You can automate that too...but not with tabadmin (yet). This can be accomplished via [tabcmd](https://onlinehelp.tableau.com/current/server/en-us/tabcmd_cmd.htm#initialuser). In case you aren't familiar, tabcmd installs with your Server, so no additional work is required.
+
++ tabcmd initialuser --username "admin" --password "P@ssword!" --friendly "Tableau Admin"
+
+This has to be run on the primary machine AND if you are using Active Directory, that user must be present in the directory when you run the command. Otherwise, it won't work.  
+
 ### Tableau 10 Features
 
 Now that Tableau 10 is released (or about to be - depending on when you read this), I've updated the section below with some tabadmin commands that you can use to configure Tableau Server to your heart's desire.
