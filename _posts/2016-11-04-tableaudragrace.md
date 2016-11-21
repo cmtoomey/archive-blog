@@ -10,7 +10,9 @@ A few months ago, I started testing Tableau on big data. This ["drag race"](http
 
 Only then can we have the democratic concept of data Tableau loves to talk about. It's easy when your row count is 1-5 million, or maybe even 10s or 100s of millions. But what about a billion, or 10s of billions? At that scale, we see true humnan behavior, we can make true inference, and affect real change. If that data is backed by a platform that facilitates interactivity, then we can have more data-driven conversations and maybe change the world (or just pick a better fantasy football team).
 
-That's what we set out to do. Here's the results.
+That's what we set out to do. Before I get to the results, let me reiterate that the commentary below is my own, and does **NOT** represent the opinion of Tableau, Zillow, or anyone else. The results do not represent a commercial endorsement of any kind. 
+
+Here are the results: 
 
 ---
 
@@ -72,9 +74,11 @@ Let's look at the results, shall we?
 
 ![Load Performance](https://cmtoomey.github.io/img/LoadPerformance.png)
 
-Snowflake crushes the competition, and it's not even close. They were able to average almost a billion rows per minute. Granted, this was running on a 3XL node (which ain't cheap), but that's freaking fast. Dare I say 
+Snowflake crushes the competition. They were able to average almost a billion rows per minute. Granted, this was running on a 3XL node (which ain't cheap), but that's freaking fast. Dare I say 
 
 ![Ludicrous](https://media.giphy.com/media/A3khUbNbI820o/giphy.gif)
+
+It is also worth mentioning that that 3XL node loading our data is completely pegged during ingestion, so if you wanted to query it, you would have to have an additional node (incurring additional cost). 
 
 But wait a minute, Chris. What about Presto? Their numbers far better than Snowflake's numbers - what's up with that? Well, that comes down to a difference in technology. Presto (like most modern Hadoop technologies running on AWS' EMR) doesn't actually need you to *load* data. All you have to do is put data into S3 (with some logical partitioning structure - like day), register the data as an **EXTERNAL TABLE** in Hive and it can be queried. The time reported here is the time it took to register that table and build the partitions for querying. What are these partitions you ask? Well, read about them [here](https://www.tutorialspoint.com/hive/hive_partitioning.htm).
 
@@ -94,7 +98,7 @@ Jethro - in this test they look super slow. However, you need to remember that t
 
 Jethro indexes every column and every update to each column in order to perform queries. It knows where every combination of data is at all times. Where other technologies are built around table scans, they only query data they need. This is a paradigm shift in query concepts - and they are the only ones that do it. Our data was so large that this number isn't unexpected.
 
-Google was a slightly different scenario. Our data already lived in BQ, but in a raw form. The processed version was in our S3 buckets, and it wasn't worth the effort to set up the permissions to copy from our account to the test account. Google built a processing pipeline to bring our data back into Big Query that was slightly different than the regular way data gets piped into Big Query. Their processing times are not reflective of actual use cases, so you can expect faster load speeds than what you see here.
+Google was a slightly different scenario. Our data already lived in BQ, but in a raw form. The processed version was in our S3 buckets, and it wasn't worth the effort to set up the permissions to copy from our account to the test account. Google built a processing pipeline to bring our data back into Big Query that was slightly different than the regular way data gets piped into Big Query. Their processing times are not reflective of actual use cases, so you can expect faster load speeds than what you see here. Google also does not charge for ingest, and those resources are non-competitive, so you can query at the same time as you ingest, which can be batch or streaming via the BQ API. 
 
 ### Standings 
 
@@ -115,7 +119,7 @@ We load the data, but what about compression? With big data, compression is key 
 
 Again, Snowflake destroys the competition. On average, the data they loaded in was 66% smaller than its raw form. I could talk about their micro-partitioning method, but I won't bore you. Suffice to say, it's a breakthrough method. MemSQL comes in second with some excellent string-encoding, and Redshift brings up the rear. One thing to note is that with Snowflake, I run a COPY command and that's it. The other systems, you have to specify different column encodings. Snowflake isn't only the fastest so-far, it's also the easiest to use. 
 
-Google things about storage slightly differently. They uncompress the data to make it available for querying. That means that our data went from 10TB to around 100TB. Normally, that would be a major problem, but Big Query isn't built like other systems. Again, I could tell you all about Dremel and Colossus and Jupiter, but nobody wants to read technical papers on a blog (and you've got a lot of text so far). Suffice to say, it's for a reason, so don't get too caught up with that 1000%.
+Google things about storage slightly differently. The data is stored in a compressed format, with a fancy technology called [Capcacitor](https://cloud.google.com/blog/big-data/2016/04/inside-capacitor-bigquerys-next-generation-columnar-storage-format). They are always optimizing the files for performance, but they charge you for uncompressed storage, so that your costs are more predictable. That means that our data went from 10TB to around 100TB. Normally, that would be a major problem, but Big Query isn't built like other systems. Again, I could tell you all about Dremel and Colossus and Jupiter, and how they play well with Capacitor, but nobody wants to read technical papers on a blog (and you've got a lot of text so far). Suffice to say, it's for a reason, so don't get too caught up with that 1000%.
 
 Similarly for Jethro, they operate on a different architecture and I don't want people to be biased. Their indices were huge (372% of original), but those are built for their query engine so that's totally ok. I do have to rank them accordingly, though. 
 
