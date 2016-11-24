@@ -19,12 +19,12 @@ Ok, let's go!
 
 Based on our research and interaction with the vendors, here's the hardware we ran our tests on. 
 
-+ Redshift: 20 DC1.8XLarge
-+ Snowflake: XL, 2XL, 3XL nodes
-+ MemSQL: 24 C3.8XLarge
-+ Presto: 20 R3.8XLarge
-+ BigQuery: Standard account
-+ Jethro: 1 R3.4XLarge (we increased to R3.8XLarge later)
++ **Redshift:** 20 DC1.8XLarge
++ **Snowflake:** XL, 2XL, 3XL nodes
++ **MemSQL:** 24 C3.8XLarge
++ **Presto:** 20 R3.8XLarge
++ **BigQuery:** Standard account
++ **Jethro:** 1 R3.4XLarge (we increased to R3.8XLarge later)
 
 
 # How big is big?
