@@ -15,7 +15,7 @@ That's what we set out to do. Before I get to the results, let me reiterate that
 Ok, let's go!
 
 ---
-#The hardware
+# The hardware
 
 Based on our research and interaction with the vendors, here's the hardware we ran our tests on. 
 
