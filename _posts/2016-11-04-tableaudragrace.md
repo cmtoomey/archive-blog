@@ -12,9 +12,20 @@ Only then can we have the democratic concept of data Tableau loves to talk about
 
 That's what we set out to do. Before I get to the results, let me reiterate that the commentary below is my own, and does **NOT** represent the opinion of Tableau, Zillow, or anyone else. The results do not represent a commercial endorsement of any kind. 
 
-Here are the results: 
+Ok, let's go!
 
 ---
+#The hardware
+
+Based on our research and interaction with the vendors, here's the hardware we ran our tests on. 
+
++ Redshift: 20 DC1.8XLarge
++ Snowflake: XL, 2XL, 3XL nodes
++ MemSQL: 24 C3.8XLarge
++ Presto: 20 R3.8XLarge
++ BigQuery: Standard account
++ Jethro: 1 R3.4XLarge (we increased to R3.8XLarge later)
+
 
 # How big is big?
 
