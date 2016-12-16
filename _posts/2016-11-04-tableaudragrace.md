@@ -98,7 +98,7 @@ Second place in the load category goes to Redshift with almost 170m records a mi
 
 This takes us to pricing. Snowflake on-demand prices are $2/credit, with each node type doubling in credit usage. A 3XL consumes 128 credits per hour, which comes out to $256/hour. A little arithmetic ```$2/hour * 1.46 hours * 128 = $187.``` Redshift's costs range from $4.8/node-hour On-Demand to all the way down to $1.502/node-hour with a three-year commitment. Let's do the same math: ```$4.8 * 20 nodes * 7.2 hours = $619 retail OR $1.502 * 20 nodes * 7.2 hours = $216.```
 
-### Snowflake <wins></wins>. And it isn't even close.  
+### Snowflake wins. And it isn't even close.  
 
 Let me touch on the other vendors a little. MemSQL came in third, primarily because they don't have the same type of S3 API access that Redshift has. In our testing, the machines hit an S3 bottleneck and we had to adjust the load strategy. However, what you should know is that MemSQL is designed around streaming architectures. It can handle batch workloads just fine, but it excels at streaming (which wasn't a use case for us). It can natively (as in with a CREATE PIPELINE statement or the click of a "Streamliner" button) connect to Kafka/Kinesis stream or a Spark cluster and stream data in. 
 
@@ -111,6 +111,10 @@ Jethro - in this test they look super slow. However, you need to remember that t
 Jethro indexes every column and every update to each column in order to perform queries. It knows where every combination of data is at all times. Where other technologies are built around table scans, they only query data they need. This is a paradigm shift in query concepts - and they are the only ones that do it. Our data was so large that this number isn't unexpected.
 
 Google was a slightly different scenario. Our data already lived in BQ, but in a raw form. The processed version was in our S3 buckets, and it wasn't worth the effort to set up the permissions to copy from our account to the test account. Google built a processing pipeline to bring our data back into Big Query that was slightly different than the regular way data gets piped into Big Query. Their processing times are not reflective of actual use cases, so you can expect faster load speeds than what you see here. Google also does not charge for ingest, and those resources are non-competitive, so you can query at the same time as you ingest, which can be batch or streaming via the BQ API. 
+
+**Update: After I wrote this post, I got an email from Google's Tino Tereshko. Tino helped us set up this POC, and now works for the Google CTO to drive adoption of Google's Big Data tools. Given that our ingestion experience was slightly different than what normal users would experience, he asked if I would include the following**
+
+> *BigQuery can support up to 50GB/s of ingest [without compromising query capacity], auto-optimizes your data on load and at rest, and will scale into the Terabyte range (or until you run out of data). If anyone would like to know more about the ingest architecture or capabilities, they can read more [here.](https://medium.com/google-cloud/paying-it-forward-how-bigquerys-data-ingest-breaks-tech-norms-8bfe2341f5eb#.4lomt2bqr)*
 
 ### Standings 
 
