@@ -30,7 +30,7 @@ Based on our research and interaction with the vendors, here's the hardware we r
 
 # How big is big?
 
-Let's talk about data scale for a minute. There has been a lot of chatter in the Twittersphere (at least in my feed) about Redshift vs Big Query
+Let's talk about data scale for a minute. There has been a lot of chatter in the Twittersphere (at least in my feed) about Redshift vs BigQuery
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Fact or Fiction: Google BigQuery Outperforms Amazon Redshift as an Enterprise Data Warehouse? <a href="https://twitter.com/hashtag/AWS?src=hash">#AWS</a> /by <a href="https://twitter.com/jrhunt">@jrhunt</a> <a href="https://t.co/AVpNqX8FQQ">https://t.co/AVpNqX8FQQ</a></p>&mdash; Werner Vogels (@Werner) <a href="https://twitter.com/Werner/status/791451539630096384">October 27, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -58,7 +58,7 @@ Let's revisit the setup.
 
 **Data:** Internal Zillow clickstream
 **Volume:** 10TB compressed GZIP, approximately 75B rows, 250 columns (you read that right, 75 billion records)
-**Vendors:** Redshift, Snowflake, MemSQL, Big Query, Presto, Jethro
+**Vendors:** Redshift, Snowflake, MemSQL, BigQuery, Presto, Jethro
 
 Tests:
 + How fast does data load? 
@@ -110,7 +110,7 @@ Jethro - in this test they look super slow. However, you need to remember that t
 
 Jethro indexes every column and every update to each column in order to perform queries. It knows where every combination of data is at all times. Where other technologies are built around table scans, they only query data they need. This is a paradigm shift in query concepts - and they are the only ones that do it. Our data was so large that this number isn't unexpected.
 
-Google was a slightly different scenario. Our data already lived in BQ, but in a raw form. The processed version was in our S3 buckets, and it wasn't worth the effort to set up the permissions to copy from our account to the test account. Google built a processing pipeline to bring our data back into Big Query that was slightly different than the regular way data gets piped into Big Query. Their processing times are not reflective of actual use cases, so you can expect faster load speeds than what you see here. Google also does not charge for ingest, and those resources are non-competitive, so you can query at the same time as you ingest, which can be batch or streaming via the BQ API. 
+Google was a slightly different scenario. Our data already lived in BQ, but in a raw form. The processed version was in our S3 buckets, and it wasn't worth the effort to set up the permissions to copy from our account to the test account. Google built a processing pipeline to bring our data back into BigQuery that was slightly different than the regular way data gets piped into BigQuery. Their processing times are not reflective of actual use cases, so you can expect faster load speeds than what you see here. Google also does not charge for ingest, and those resources are non-competitive, so you can query at the same time as you ingest, which can be batch or streaming via the BQ API. 
 
 **Update: After I wrote this post, I got an email from Google's Tino Tereshko. Tino helped us set up this POC, and now works for the Google CTO to drive adoption of Google's Big Data tools. Given that our ingestion experience was slightly different than what normal users would experience, he asked if I would include the following**
 
@@ -135,7 +135,7 @@ We load the data, but what about compression? With big data, compression is key 
 
 Again, Snowflake destroys the competition. On average, the data they loaded in was 66% smaller than its raw form. I could talk about their micro-partitioning method, but I won't bore you. Suffice to say, it's a breakthrough method. MemSQL comes in second with some excellent string-encoding, and Redshift brings up the rear. One thing to note is that with Snowflake, I run a COPY command and that's it. The other systems, you have to specify different column encodings. Snowflake isn't only the fastest so-far, it's also the easiest to use. 
 
-Google things about storage slightly differently. The data is stored in a compressed format, with a fancy technology called [Capcacitor](https://cloud.google.com/blog/big-data/2016/04/inside-capacitor-bigquerys-next-generation-columnar-storage-format). They are always optimizing the files for performance, but they charge you for uncompressed storage, so that your costs are more predictable. That means that our data went from 10TB to around 100TB. Normally, that would be a major problem, but Big Query isn't built like other systems. Again, I could tell you all about Dremel and Colossus and Jupiter, and how they play well with Capacitor, but nobody wants to read technical papers on a blog (and you've got a lot of text so far). Suffice to say, it's for a reason, so don't get too caught up with that 1000%.
+Google things about storage slightly differently. The data is stored in a compressed format, with a fancy technology called [Capcacitor](https://cloud.google.com/blog/big-data/2016/04/inside-capacitor-bigquerys-next-generation-columnar-storage-format). They are always optimizing the files for performance, but they charge you for uncompressed storage, so that your costs are more predictable. That means that our data went from 10TB to around 100TB. Normally, that would be a major problem, but BigQuery isn't built like other systems. Again, I could tell you all about Dremel and Colossus and Jupiter, and how they play well with Capacitor, but nobody wants to read technical papers on a blog (and you've got a lot of text so far). Suffice to say, it's for a reason, so don't get too caught up with that 1000%.
 
 Similarly for Jethro, they operate on a different architecture and I don't want people to be biased. Their indices were huge (372% of original), but those are built for their query engine so that's totally ok. I do have to rank them accordingly, though. 
 
@@ -161,7 +161,7 @@ We all know that speed kills. When in doubt, the fastest system wins. How did th
 
 ![Query Results](https://cmtoomey.github.io/img/QueryPerformance.png)
 
-Here the tables turn. Google destroys all. Their average improvement was 93% - this means that our longest running query ran in 5.4 minutes! Like Snowflake, Google has a NoOps mentality - just put your data in and query it. No tuning, indexing, or extra work. I should caveat this by saying that, at time of testing, Google hadn't made their ANSI SQL capability available yet, so these queries had to be slightly re-written to into BQL (Big Query Language). Typically, BQL gets dinged (most recently by AWS in the TPC-DS benchmark) for not being ANSI compliant, having weird syntax, and just not being friendly to regular SQL folk. 
+Here the tables turn. Google destroys all. Their average improvement was 93% - this means that our longest running query ran in 5.4 minutes! Like Snowflake, Google has a NoOps mentality - just put your data in and query it. No tuning, indexing, or extra work. I should caveat this by saying that, at time of testing, Google hadn't made their ANSI SQL capability available yet, so these queries had to be slightly re-written to into BQL (BigQuery Language). Typically, BQL gets dinged (most recently by AWS in the TPC-DS benchmark) for not being ANSI compliant, having weird syntax, and just not being friendly to regular SQL folk. 
 
 We've rewritten some of these queries since then, and run them on Redshift (production, not our test rig). Performance doesn't improve significantly, so you know what, I don't care that they were rewritten. I'll take the speed and 175 minutes of my day back, thank you very much. 
 
@@ -242,7 +242,7 @@ If we look at the number of tests where they were able to be completed in under 
 + Redshift: 8
 + Snowflake: 5
 
-> Caveat: During testing, Big Query had not implemented support for Standard SQL, and Tableau had to compose queries in BQL. This has been fixed as of 10.1, so these results are not representative of the current state of tech. 
+> Caveat: During testing, BigQuery had not implemented support for Standard SQL, and Tableau had to compose queries in BQL. This has been fixed as of 10.1, so these results are not representative of the current state of tech. 
 
 Again, Google wins in query speed. Let's talk total results.
 
@@ -292,7 +292,7 @@ Second, despite what appears to be a ```SELECT SUM(Sales), Country from Table Gr
 
 With the world exploding in data, you all need a platform you can depend on. It needs to be fast, easy, and economic. Nobody has time to tune and manage databases any more - we just want the data and want to query it fast. After spending many months with massive data, Tableau, and a bunch of databases, I can recommend only three.
 
-1. Google Big Query: Fast, fast, fast.
+1. Google BigQuery: Fast, fast, fast.
 2. Snowflake: It's the most complete platform out there right now.
 3. MemSQL: A bit more work to setup and operate, but you'll be glad you did.
 
