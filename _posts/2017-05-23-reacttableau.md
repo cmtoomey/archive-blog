@@ -10,7 +10,7 @@ tags: [ 'javascript', 'tutorial' ]
 
 It's been a while since my last blog post - between work, holidays, conferences, and presenting at Tableau SKO it's been a busy couple of months. Since TC16, there really hasn't been anything I've felt compelled to write about...until this happened.
 
-<iframe src="http://www.exquisitetweets.com/tweets?eids=bb9WNm6TQdM.bb9XVJl5czI.bb9YpyZamOX.bb93ghblGBE.bb93xk3NKrA.bb93Pm6VmbQ.bb93W9Pdvwc.bb94d74506m.bcaci37QPOS.bcacsYdBbof.bcasWYJM7QO.bcas7sGns4s.bcavFhnXr6k" width="800" height="450" frameBorder="0"></iframe>
+![D3Tweets](https://cmtoomey.github.io/img/d3twitter.gif)
 
 I know that many Tableau enthusiasts start exploring D3 because it offers a level of flexibility and customization that is difficult to achieve in Tableau. But the root of Rody's D3 expedition isn't about custom data viz, it's about integration. It's about consuming Tableau in places other than Server or in a native Tableau app.
 
