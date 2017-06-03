@@ -14,9 +14,9 @@ It's been a while since my last blog post - between work, holidays, conferences,
 
 I know that many Tableau enthusiasts start exploring D3 because it offers a level of flexibility and customization that is difficult to achieve in Tableau. But the root of Rody's D3 expedition isn't about custom data viz, it's about integration. It's about consuming Tableau in places other than Server or in a native Tableau app.
 
-> ## At some point, the normal Tableau ecosystem, just isn't enough. At some point, we want to build bigger and better things. Applications that are simultaneously fast, beautiful, insightful, and modern. 
+> ## At some point, the normal Tableau ecosystem just isn't enough. We eventually want to build bigger and better things. Applications that are simultaneously fast, beautiful, insightful, and modern. 
 
-I'm a firm believer in letting tool do what they were designed to do. Tableau is great for exploring data and generating insights. It's not that great at delivering an app-like experience. Trying to put any UX on it can be an exercise in tedium and frustration. The amount of work that Robert Rouse put into the [hamburger menu concept is extraordinary, and simultaneously ludicrous.](https://www.interworks.com/blog/rrouse/2016/01/04/creating-collapsing-menu-container-tableau) Modern UI libraries have already solved these problems, so we should let them do this sort of thing, right? Let Tableau focus on the data experience. 
+I'm a firm believer in letting tools do what they were designed to do. Tableau is great for exploring data and generating insights. It's not that great at delivering an app-like experience. Trying to put any UX on it can be an exercise in tedium and frustration. The amount of work that Robert Rouse put into the [hamburger menu concept is extraordinary, and simultaneously ludicrous.](https://www.interworks.com/blog/rrouse/2016/01/04/creating-collapsing-menu-container-tableau) Modern UI libraries have already solved these problems, so we should let them do this sort of thing, right? Let Tableau focus on the data experience. 
 
 This is something I've been working on in my day job at Zillow (You can see if for yourself in my [Plotcon talk](https://www.youtube.com/watch?v=9hQbEZ2fz80)), and I'd like to teach you how you can do it too.
 
@@ -28,7 +28,7 @@ This is something I've been working on in my day job at Zillow (You can see if f
 
 # So, What is React?
 
-Everything you are about to see is Javascript, but don't worry, this is not like any Javascript you've worked with before. *This JS makes sense.* I believe that if you've spent any timein Tableau at all, you already know how to think in React (the code part will come with practice).
+Everything you are about to see is Javascript, but don't worry, this is not like any Javascript you've worked with before. *This JS makes sense.* I believe that if you've spent any timein Tableau at all, you already know how to think in React (and the code part will come with practice).
 
 In short, [React is a way to build User Interfaces.](https://facebook.github.io/react/) I'm not going to go into too many details about how it all works, there are enough tutorials out there. Here is what you need to know: 
 
