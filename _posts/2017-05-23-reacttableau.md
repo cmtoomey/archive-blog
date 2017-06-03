@@ -14,7 +14,7 @@ It's been a while since my last blog post - between work, holidays, conferences,
 
 I know that many Tableau enthusiasts start exploring D3 because it offers a level of flexibility and customization that is difficult to achieve in Tableau. But the root of Rody's D3 expedition isn't about custom data viz, it's about integration. It's about consuming Tableau in places other than Server or in a native Tableau app.
 
-> ## At some point, the normal Tableau ecosystem, just isn't enough. At som point, we want to build bigger and better things. Applications that are simultaneously fast, beautiful, insightful, and modern. 
+> ## At some point, the normal Tableau ecosystem, just isn't enough. At some point, we want to build bigger and better things. Applications that are simultaneously fast, beautiful, insightful, and modern. 
 
 I'm a firm believer in letting tool do what they were designed to do. Tableau is great for exploring data and generating insights. It's not that great at delivering an app-like experience. Trying to put any UX on it can be an exercise in tedium and frustration. The amount of work that Robert Rouse put into the [hamburger menu concept is extraordinary, and simultaneously ludicrous.](https://www.interworks.com/blog/rrouse/2016/01/04/creating-collapsing-menu-container-tableau) Modern UI libraries have already solved these problems, so we should let them do this sort of thing, right? Let Tableau focus on the data experience. 
 
@@ -275,7 +275,7 @@ We have an outer `<div>` to meet our single output requirements, the original `<
 <VictoryLine data={this.state.victoryData}/>
 ```
 
-That will give us an animated bar chart. Let's add make that button update the data and call it a day.
+That will give us an animated bar chart. Let's make that button update the data and call it a day.
 
 ## Step 8: Dat button
 
@@ -294,6 +294,6 @@ Now when we click the button, we re-run `getData()`, update state, and because w
 
 Now that you've completed this task - you can go out and make a bunch of awesome things. React plays well on native apps too, so feel free to venture into the world of mobile. You next step should be to get the fabulous [Create React App](https://github.com/facebookincubator/create-react-app).
 
-One thing to note for now - tableau-api isn't licensed correctly. Whenever you build anything in Open Source, please make sure you apply a license to it so others can use it! Ben Lower at Tableau is working on getting tableau-api into their own repository, with the proper license in place(since it is their IP and both mine and Ilya's repository's are just building on their code). Open Source is great because we can all share and build on each other's work, but we all have to make sure we follow the rules that enable that sharing. 
+One thing to note for now - tableau-api isn't licensed correctly. Whenever you build anything in Open Source, please make sure you apply a license to it so others can use it! Ben Lower at Tableau is working on getting tableau-api into their own repository, with the proper license in place(since it is their IP and both mine and Ilya's repositories are just building on their code). Open Source is great because we can all share and build on each other's work, but we all have to make sure we follow the rules that enable that sharing. 
 
 I hope you're inspired to go build your own React apps now - with or without Tableau! Victory is great, but there are a number of other D3-React libraries to play with too. There's also a bunch of UI libraries so you don't have to build buttons and forms from scratch. So find what you like best and get to coding!
