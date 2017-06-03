@@ -83,7 +83,7 @@ This syntax says "go get package A and (S)ave it to my current project. Once it'
 
 ## Step 3: Understand the skeleton
 
-At the top, the first thing you see is an import statement - this brings in all the features you need for your component. In this case, we are bringing in core React, another component called Vacation, and the tableau-react and react-youtube libraries. 
+At the top, the first thing you see is an import statement - this brings in all the features you need for your component. In this case, we are bringing in core React, another component called Vacation, and the tableau-react and react-youtube libraries. Your presentation should skip the Vacation.js import - that's what I called my Tableau component and if you it it without actually having it, React will error out. You can add in your own component after we build it. 
 
 ```jsx
 import React from "react";
