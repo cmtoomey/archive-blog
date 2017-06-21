@@ -96,7 +96,7 @@ But wait a minute, Chris. What about Presto? Their numbers far better than Snowf
 
 Second place in the load category goes to Redshift with almost 170m records a minute. Not bad, but after seeing Snowflake's results, I was a bit disappointed. Why? One of the advantages of Redshift is it's tight integration with S3. I would expect that these private APIs would give it some advantage over other vendors - especially since we were writing data to SSDs. But if we consider that Snowflake is really just doing S3-to-S3 transfers and not writing to physical disk, we realize that it's an apples-to-oranges comparison. 
 
-This takes us to pricing. Snowflake on-demand prices are $2/credit, with each node type doubling in credit usage. A 3XL consumes 128 credits per hour, which comes out to $256/hour. A little arithmetic ```$2/hour * 1.46 hours * 128 = $187.``` Redshift's costs range from $4.8/node-hour On-Demand to all the way down to $1.502/node-hour with a three-year commitment. Let's do the same math: ```$4.8 * 20 nodes * 7.2 hours = $619 retail OR $1.502 * 20 nodes * 7.2 hours = $216.```
+This takes us to pricing. Snowflake on-demand prices are $2/credit, with each node type doubling in credit usage. A 3XL consumes 64 credits per hour, which comes out to $128/hour. A little arithmetic ```$2/hour * 1.46 hours * 64 = $187.``` Redshift's costs range from $4.8/node-hour On-Demand to all the way down to $1.502/node-hour with a three-year commitment. Let's do the same math: ```$4.8 * 20 nodes * 7.2 hours = $619 retail OR $1.502 * 20 nodes * 7.2 hours = $216.```
 
 ### Snowflake wins. And it isn't even close.  
 
