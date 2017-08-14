@@ -34,7 +34,7 @@ title: "{ Tableauing Dangerously }"
 description: "Tableau-centric blog on building all the awesome things, code or no-code"
 keywords: "chris, toomey, tableau, alteryx, d3, analysis, awesome"
 favicon: "/img/favicon.ico"
-404-img: "/img/utini.gif"
+errorimg: "/img/utini.gif"
 
 ################
 # Header layout #
