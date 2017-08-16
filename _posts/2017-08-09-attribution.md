@@ -54,7 +54,7 @@ Let me be clear - I'm not talking about techniques or calculation methods, or cl
 
 What we **should** be concerned about it true plagiarism: wholesale appropriation of content without attribution. In this context, Prasad plagiarized directly from Andy. He admitted it when confronted, and took the content down. *That is what is supposed to happen.*
 
-In all honesty, that is the easy example. Despite the furor, everythign was fairly cut and dried. Instead, let's look at a slightly more complicated example. 
+In all honesty, that is the easy example. Despite the furor, everything was fairly cut and dried. Instead, let's look at a slightly more complicated example. 
 
 ---
 
@@ -87,7 +87,7 @@ Why does this matter? I'm willing to bet that traffic to Andy's blog and that of
 
 <iframe src="https://giphy.com/embed/6T2pCmyeqDWgg" width="480" height="359" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/80s-vanilla-ice-baby-6T2pCmyeqDWgg">via GIPHY</a></p>
 
-Let's bring this back to Drought viz that started this whole thing. What if Prasad had downloaded this viz, and simply swapped out Andy's data for his own before uploading with no other changes? Is that ok? What if he never blogged about it, and didn't use Twitter, how would he give credit? Would he even have to? 
+Let's bring this back to the Drought viz that started this whole thing. What if Prasad had downloaded this viz, and simply swapped out Andy's data for his own before uploading with no other changes? Is that ok? What if he never blogged about it, and didn't use Twitter, how would he give credit? Would he even have to? 
 
 Before you answer, remember that if you post something to Public, it's free to use by anyone, **any way they want.** Judging by Andy's response and veiled threat to blacklist Prasad if he didn't take it down, my guess is that he would not be happy with this hypothetical example. But we can't have it both ways. Vanilla Ice eventually had to pay royalties...you sample people's work, you give credit. **Period.** And I think that's the standard we want. *Simple and persistent attribution.*
 
