@@ -102,8 +102,11 @@ syntax-highlight: True
 ############
 
 events:
+  - image: "/img/timeline/mapbox.png"
+    date: "November 2017 - Present"
+    description: "Work at Mapbox"
   - image: "/img/timeline/zillowimg.png"
-    date: "March 2104 - April 2016"
+    date: "March 2104 - November 2017"
     description: "Work at Zillow"
   - image: "/img/timeline/slalom.png"
     date: "March 2104 - April 2016"
@@ -129,15 +132,13 @@ timeline-img: "/img/timeline/bomber.jpg"
 # Contact #
 ###########
 
-email: "christ@zillowgroup.com"
+email: "chris.toomey@mapbox.com"
 
 ##################
 # Social Buttons #
 ##################
 
 social:
-  - title: "facebook"
-    url: "https://www.facebook.com/chris.toomey"
   - title: "twitter"
     url: "https://twitter.com/Sock1tToomey"
   - title: "github"
